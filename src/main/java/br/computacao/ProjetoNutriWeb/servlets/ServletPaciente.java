@@ -46,17 +46,20 @@ public class ServletPaciente extends HttpServlet {
 		if(request.getParameter("pacienteid")==null) {
 			Paciente novoPaciente = new Paciente();
 			novoPaciente.setNome(request.getParameter("nome"));
+			novoPaciente.setEmail(request.getParameter("email"));
+			novoPaciente.setSexo(request.getParameter("sexo").charAt(0));
 			novoPaciente.setIdade(Integer.parseInt(request.getParameter("idade")));
-			// falta colocar o resto
-			//novoPaciente.setModalidade(Modalidade.valueOf(request.getParameter("modalidade").toUpperCase()));
+			novoPaciente.setTel(request.getParameter("tel"));
 			dao.save(novoPaciente);
 		}else {
 			long pacienteid = Long.parseLong(request.getParameter("pacienteid"));
 			Paciente paciente = dao.findById(Paciente.class, pacienteid).get();
 			
 			paciente.setNome(request.getParameter("nome"));
+			paciente.setEmail(request.getParameter("email"));
+			paciente.setSexo(request.getParameter("sexo").charAt(0));
 			paciente.setIdade(Integer.parseInt(request.getParameter("idade")));
-			// falta o resto
+			paciente.setTel(request.getParameter("tel"));
 			dao.update(paciente);
 		}
 		response.sendRedirect("consultaPaciente.jsp");
