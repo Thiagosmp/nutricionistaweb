@@ -24,10 +24,15 @@
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Nome</th>
-				<th>Email</th>
-				<th>Sexo</th>
-				<th>Status</th>
+				<th>Peso</th>
+				<th>Altura</th>
+				<th>Data Inicio</th>
+				<th>Nome Nutricionista</th>
+				<th>Nome Paciente</th>
+				<th>IMC</th>
+				<th>Massa G</th>
+				<th>Massa M</th>
+				<th>Peso Ideal</th>
 				<th></th>
 			</tr>
 		</thead>
