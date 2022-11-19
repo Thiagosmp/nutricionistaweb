@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 public class AvaliaFisica {
@@ -27,4 +26,82 @@ public class AvaliaFisica {
 	private Nutricionista nutricionista;
 	@ManyToOne
 	private Paciente paciente;
+	
+	public AvaliaFisica() {
+		
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public float getPeso() {
+		return peso;
+	}
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+	public float getAltura() {
+		return altura;
+	}
+	public void setAltura(float altura) {
+		this.altura = altura;
+	}
+	public LocalDate getDataInicio() {
+		return dataInicio;
+	}
+	public void setDataInicio(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+	public String getNomeNutri() {
+		return nomeNutri;
+	}
+	public void setNomeNutri(String nomeNutri) {
+		this.nomeNutri = nomeNutri;
+	}
+	public String getNomePac() {
+		return nomePac;
+	}
+	public void setNomePac(String nomePac) {
+		this.nomePac = nomePac;
+	}
+	public float getImc() {
+		return imc;
+	}
+	public void setImc(float imc) {
+		this.imc = imc;
+	}
+	public float getMassaG() {
+		return massaG;
+	}
+	public void setMassaG(float massaG) {
+		this.massaG = massaG;
+	}
+	public float getMassaM() {
+		return massaM;
+	}
+	public void setMassaM(float massaM) {
+		this.massaM = massaM;
+	}
+	public float getPesoIdeal() {
+		return pesoIdeal;
+	}
+	public void setPesoIdeal(float pesoIdeal) {
+		this.pesoIdeal = pesoIdeal;
+	}
+	public Nutricionista getNutricionista() {
+		return nutricionista;
+	}
+	public void setNutricionista(Nutricionista nutricionista) {
+		this.nutricionista = nutricionista;
+	}
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	
+	
 }
