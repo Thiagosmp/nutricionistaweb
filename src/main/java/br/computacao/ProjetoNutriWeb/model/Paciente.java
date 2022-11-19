@@ -12,8 +12,8 @@ public class Paciente{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String nome;
-	@Column(length = 11)
-	private Integer tel;
+	@Column(length = 16)
+	private String tel;
 	@Column(unique = true)
 	private String email;
 	private char sexo;
@@ -35,10 +35,10 @@ public class Paciente{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getTel() {
+	public String getTel() {
 		return tel;
 	}
-	public void setTel(Integer tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
 	public String getEmail() {
