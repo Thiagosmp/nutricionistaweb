@@ -24,14 +24,11 @@
 		<input type="text" name="sexo" />
 		<br/>
 		<label>Status</label>
-		<input type="text" name="status" />
-		<br/>
-		<!--  <label>Status</label>
-		<input type="radio" name="status" />
+		<input type="radio" value="Ativo" name="status" />
 		<label for="status">Ativo</label>
-		<input type="radio" name="status" />
+		<input type="radio" value="Inativo" name="status" />
 		<label for="status">Inativo</label><br>
-		<br/>-->
+		<br/>
 		<input type="submit" value="Salvar"/>
 	</form>
 </body>

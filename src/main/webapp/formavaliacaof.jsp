@@ -13,7 +13,7 @@
 <body>
 	<h1>Cadastro Avaliação Física</h1>
 	
-	<form action="controllerNutricionista" method="post">
+	<form action="controlleravaliacaof" method="post">
 		<label>Peso</label>
 		<input type="text" name="peso" />
 		<br/>
