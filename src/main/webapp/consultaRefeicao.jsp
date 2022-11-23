@@ -23,6 +23,7 @@
 	<table class="table table-bordered">
 		<thead>
 			<tr>
+				<th>ID</th>
 				<th>Café da manhã 1</th>
 				<th>Café da manhã 2</th>
 				<th>Almoço</th>
