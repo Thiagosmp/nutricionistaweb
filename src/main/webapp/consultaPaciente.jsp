@@ -19,7 +19,7 @@
 	List<Paciente> pacientes = dao.findAll(Paciente.class);
 	%>	
 <div class="container">
-	<a  class="btn btn-primary" href="formcurso.jsp">Novo Paciente</a>
+	<a  class="btn btn-primary" href="formpaciente.jsp">Novo(a) Paciente</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>

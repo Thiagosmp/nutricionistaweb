@@ -1,16 +1,12 @@
 package br.computacao.ProjetoNutriWeb.servlets;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import br.computacao.ProjetoNutriWeb.dao.NutricionistaDao;
-import br.computacao.ProjetoNutriWeb.dao.PacienteDao;
 import br.computacao.ProjetoNutriWeb.model.Nutricionista;
-import br.computacao.ProjetoNutriWeb.model.Paciente;
 import br.computacao.ProjetoNutriWeb.model.Status;
 
 /**
