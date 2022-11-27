@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="./styles/util.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
-
+	<title>Cadastrar Avaliação</title>
 </head>
 <body>
 

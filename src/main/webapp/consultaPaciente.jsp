@@ -11,7 +11,7 @@
 	rel="stylesheet" 
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 	crossorigin="anonymous">
-<title>Consulta Paciente</title>
+<title>Consultar Paciente</title>
 </head>
 <body>
 	<%
@@ -19,7 +19,7 @@
 	List<Paciente> pacientes = dao.findAll(Paciente.class);
 	%>	
 <div class="container">
-	<a  class="btn btn-primary" href="formpaciente.jsp">Novo(a) Paciente</a>
+	<a  class="btn btn-primary" href="formpaciente.jsp">Cadastrar Paciente</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>

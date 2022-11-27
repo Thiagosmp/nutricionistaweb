@@ -11,7 +11,7 @@
 	rel="stylesheet" 
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 	crossorigin="anonymous">
-<title>Consulta Nutricionista</title>
+<title>Consultar Nutricionista</title>
 </head>
 <body>
 	<%
@@ -19,7 +19,7 @@
 	List<Nutricionista> nutricionistas = dao.findAll(Nutricionista.class);
 	%>	
 <div class="container">
-	<a  class="btn btn-primary" href="formnutricionista.jsp">Novo(a) Nutricionista</a>
+	<a  class="btn btn-primary" href="formnutricionista.jsp">Cadastrar Nutricionista</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>
