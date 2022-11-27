@@ -32,7 +32,7 @@
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="dataInicio" placeholder="Data de Início">
+					<input class="input1" type="date" name="dataInicio" placeholder="Data de Início">
 					<span class="shadow-input1"></span>
 				</div>
 

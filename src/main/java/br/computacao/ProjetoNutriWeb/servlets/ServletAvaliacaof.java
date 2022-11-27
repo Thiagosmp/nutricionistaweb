@@ -1,11 +1,16 @@
 package br.computacao.ProjetoNutriWeb.servlets;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.time.LocalDate;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.DateFormatter;
+
 import br.computacao.ProjetoNutriWeb.dao.AvaliacaoFisicaDao;
 import br.computacao.ProjetoNutriWeb.model.AvaliaFisica;
 

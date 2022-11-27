@@ -31,18 +31,25 @@
 		<label>Email</label>
 		<input type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
 		<br/>
-		<label>Sexo</label>
-		<input type="text" name="sexo" value="<%= conNutricionista.getSexo() %>" />
+		<div class="select-style-title" style="margin-top: -11px;">
+			<label for="sexo">Selecione o Sexo:</label>
+		</div>
+		<div>
+			<select id="sexo" name="sexo" class="select-style">
+				<option  value="M">Masculino</option>
+				<option  value="F">Feminino</option>
+			</select>
+		</div>
 		<br/>
-		<label>Status</label>
-		<input type="radio" name="status" value="Ativo" />
-		<label for="status">Ativo</label>
-		<input type="radio" name="status" value="Inativo" />
-		<label for="status">Inativo</label>
-		
-		<br/>
-		
-		
+		<div class="select-style-title" style="margin-top: -11px;">
+			<label for="status">Selecione o Status:</label>
+		</div>
+		<div>
+			<select id="status" name="status" class="select-style">
+				<option  value="Ativo">Ativo</option>
+				<option  value="Inativo">Inativo</option>
+			</select>
+		</div>
 		<input type="submit" value="Salvar"/>
 	</form>
 </body>

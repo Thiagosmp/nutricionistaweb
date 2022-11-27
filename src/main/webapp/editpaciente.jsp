@@ -31,9 +31,15 @@
 		<label>Email</label>
 		<input type="text" name="email" value="<%= conPaciente.getEmail() %>" />
 		<br/>
-		<label>Sexo</label>
-		<input type="text" name="sexo" value="<%= conPaciente.getSexo() %>" />
-		<br/>
+		<div class="select-style-title" style="margin-top: -11px;">
+			<label for="sexo">Selecione o Sexo:</label>
+		</div>
+		<div>
+			<select id="sexo" name="sexo" class="select-style">
+				<option  value="M">Masculino</option>
+				<option  value="F">Feminino</option>
+			</select>
+		</div>
 		<label>Idade</label>
 		<input type="text" name="idade" value="<%= conPaciente.getIdade() %>" />
 		<br/>
