@@ -20,7 +20,9 @@
 			</div>
 
 			<form action="controllerPaciente" method="post" class="contact1-form validate-form">
-                <h3> Cadastro paciente</h3>
+                <div class="contact1-form-title">
+					<h3> Cadastrando um Paciente</h3>
+				</div>
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="nome" placeholder="Nome">
 					<span class="shadow-input1"></span>
@@ -48,7 +50,7 @@
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">
 						<span>
-							Cadastre-se
+							Cadastrar Paciente
 							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
 						</span>
 					</button>

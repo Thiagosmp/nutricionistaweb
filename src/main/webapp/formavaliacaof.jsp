@@ -16,11 +16,13 @@
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="./images/img-04.png" alt="IMG">
+				<img src="./images/img-04.jpg" alt="IMG">
 			</div>
 
 			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
-                <h3> Cadastro Avaliação</h3>
+                <div class="contact1-form-title">
+					<h3>Avaliação Paciente</h3>
+				</div>
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="peso" placeholder="Peso">
 					<span class="shadow-input1"></span>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="utf-8"%>
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="utf-8"%>-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,38 +15,44 @@
 
 	<div class="contact1">
 		<div class="container-contact1">
-			<div class="contact1-pic js-tilt" data-tilt>
+			<!--<div class="contact1-pic js-tilt" data-tilt>
 				<img src="./images/img-03.png" alt="IMG">
+			</div>-->
+			
+			<div class="contact1-form-title" style="margin-left: 18rem; margin-bottom: 37rem; position: absolute;">
+				<h3>Cadastrando Refeição</h3>
 			</div>
-
-			<form action="controllerRefeicao" method="post" class="contact1-form validate-form">
-                <h3> Cadastro refeição</h3>
+			<form action="controllerRefeicao" method="post" class="contact1-form validate-form" style="margin-top: 3.5rem;">
                 <div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="cafe1" placeholder="Café da manhã 1">
+					<textarea class="input1" type="text" name="cafe1" placeholder="Café da manhã 1"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="cafe2" placeholder="Café da manhã 2">
+					<textarea class="input1" type="text" name="cafe2" placeholder="Café da manhã 2"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="almoco" placeholder="Almoço">
+					<textarea class="input1" type="text" name="almoco" placeholder="Almoço"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
+			</form>
 
+			<form action="controllerRefeicao" method="post" class="contact1-form validate-form" style="margin-top: 3.5rem;">
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="cafeT1" placeholder="Café da tarde 1">
+					<textarea class="input1" type="text" name="cafeT1" placeholder="Café da tarde 1"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="cafeT2" placeholder="Café da tarde 2">
+					<textarea class="input1" type="text" name="cafeT2" placeholder="Café da tarde 2"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="jantar" placeholder="Jantar">
+					<textarea class="input1" type="text" name="jantar" placeholder="Jantar"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
+			</form>
 
+			<div style="margin-left: 40%; margin-top: 10px;">
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">
 						<span>
@@ -55,7 +61,7 @@
 						</span>
 					</button>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 
