@@ -1,49 +1,80 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Avaliação Física</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
 </head>
 <body>
-	<h1>Cadastro Avaliação Física</h1>
-	
-	<form action="controlleravaliacaof" method="post">
-		<label>Peso</label>
-		<input type="text" name="peso" />
-		<br/>
-		<label>Altura</label>
-		<input type="text" name="altura" />
-		<br/>
-		<label>Data Inicio</label>
-		<input type="text" name="dataInicio" />
-		<br/>
-		<label>Nome Nutricionista</label>
-		<input type="text" name="nomeNutri" />
-		<br/>
-		<label>Nome Paciente</label>
-		<input type="text" name="nomePac" />
-		<br/>
-		<label>IMC</label>
-		<input type="text" name="imc" />
-		<br/>
-		<label>Massa Gorda</label>
-		<input type="text" name="massaG" />
-		<br/>
-		<label>Massa Magra</label>
-		<input type="text" name="massaM" />
-		<br/>
-		<label>Peso Ideal</label>
-		<input type="text" name="pesoIdeal" />
-		<br/>
-		<input type="submit" value="Salvar"/>
-	</form>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="./images/img-04.png" alt="IMG">
+			</div>
+
+			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
+                <h3> Cadastro Avaliação</h3>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="peso" placeholder="Peso">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="altura" placeholder="Altura">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="dataInicio" placeholder="Data de Inicio">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="nomeNutri" placeholder="Nome nutricionista">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="nomePac" placeholder="Nome paciente">
+					<span class="shadow-input1"></span>
+				</div>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="imc" placeholder="IMC">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="massaG" placeholder="Massa gorda">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="massaM" placeholder="Massa magra">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="pesoIdeal" placeholder="Peso ideal">
+					<span class="shadow-input1"></span>
+				</div>
+
+
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Cadastrar Avaliação
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 </body>
 </html>
-
 

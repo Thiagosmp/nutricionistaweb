@@ -1,35 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Cadastro Paciente</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
 </head>
 <body>
-	<h1>Cadastro Paciente</h1>
-	
-	<form action="controllerPaciente" method="post">
-		<label>Nome</label>
-		<input type="text" name="nome" />
-		<br/>
-		<label>Email</label>
-		<input type="text" name="email" />
-		<br/>
-		<label>Sexo</label>
-		<input type="text" name="sexo" />
-		<br/>
-		<label>Idade</label>
-		<input type="text" name="idade" />
-		<br/>
-		<label>Telefone</label>
-		<input type="text" name="tel" />
-		<br/>
-		<input type="submit" value="Salvar"/>
-	</form>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="./images/img-02.png" alt="IMG">
+			</div>
+
+			<form action="controllerPaciente" method="post" class="contact1-form validate-form">
+                <h3> Cadastro paciente</h3>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="nome" placeholder="Nome">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="email" placeholder="Email">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="sexo" placeholder="Sexo">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="idade" placeholder="Idade">
+					<span class="shadow-input1"></span>
+				</div>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="tel" placeholder="Telefone">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Cadastre-se
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 </body>
 </html>

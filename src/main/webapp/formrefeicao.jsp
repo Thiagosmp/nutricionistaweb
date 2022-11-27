@@ -3,36 +3,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Refeição</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
 </head>
 <body>
-	<h1>Cadastro Refeição</h1>
-	
-	<form action="controllerRefeicao" method="post">
-		<label>Café da manhã 1</label>
-		<input type="text" name="cafe1" />
-		<br/>
-		<label>Café da manhã 2</label>
-		<input type="text" name="cafe2" />
-		<br/>
-		<label>Almoço</label>
-		<input type="text" name="almoco" />
-		<br/>
-		<label>Café da tarde 1</label>
-		<input type="text" name="cafeT1" />
-		<br/>
-		<label>Café da tarde 2</label>
-		<input type="text" name="cafeT2" />
-		<br/>
-		<label>Jantar</label>
-		<input type="text" name="jantar" />
-		<br/>
-		<input type="submit" value="Salvar"/>
-	</form>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="./images/img-03.png" alt="IMG">
+			</div>
+
+			<form action="controllerRefeicao" method="post" class="contact1-form validate-form">
+                <h3> Cadastro refeição</h3>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="cafe1" placeholder="Café da manhã 1">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="cafe2" placeholder="Café da manhã 2">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="almoco" placeholder="Almoço">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="cafeT1" placeholder="Café da tarde 1">
+					<span class="shadow-input1"></span>
+				</div>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="cafeT2" placeholder="Café da tarde 2">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="jantar" placeholder="Jantar">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Cadastrar refeição
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 </body>
 </html>
+
