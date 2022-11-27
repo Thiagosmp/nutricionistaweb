@@ -11,11 +11,13 @@
 		<div>
             <div class="borderCard">
                 <div class="card">
-                    <h3><span style="color: #44b16e;">Nutri</span>Program</h3>
-                    <input type="email" name="sexo" placeholder="E-mail" />
-                    <input type="password" name="sexo" placeholder="Senha" />
-                    <div class="button">
-                        LOGIN
+                    <h3 style="font-size: 30px;"><span style="color: #44b16e;">Nutri</span>Program</h3>
+                    <div class="loginContent">
+                        <input type="email" name="sexo" placeholder="E-mail" />
+                        <input type="password" name="sexo" placeholder="Senha" />
+                        <div class="button">
+                            LOGIN
+                        </div>
                     </div>
                 </div>
             </div>

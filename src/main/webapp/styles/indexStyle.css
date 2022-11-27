@@ -20,6 +20,9 @@ input {
     margin-bottom: 1rem;
     padding: 10px 10px;
     display: flex;
+    border-radius: 7px;
+    width: 100%;
+    border-style: none;
 }
 
 .button {
@@ -28,6 +31,8 @@ input {
     background-color: #3e7f6e;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
 }
 
 .button:hover {
@@ -44,10 +49,17 @@ input {
     position: relative;
     background: rgb(0, 0, 0, 0.2);
     padding: 10px;
+    border-radius: 10px;
 }
 
 .card{
     background: rgb(0, 0, 0, 0.6);
-    color: white;
-    padding: 2rem;
+    color: #fff;
+    padding: 5rem;
+    border-radius: 10px;
+}
+
+.loginContent{
+    align-items: center;
+    margin-left: -1.3rem;
 }
