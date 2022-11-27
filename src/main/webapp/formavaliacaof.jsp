@@ -5,7 +5,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="./styles/util.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
@@ -20,7 +19,9 @@
 			</div>
 
 			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
-                <h3> Cadastro Avaliação</h3>
+               	<div class="contact1-form-title">
+                	<h3>Cadastrando Avaliação Física</h3>
+                </div>
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="peso" placeholder="Peso">
 					<span class="shadow-input1"></span>
@@ -31,17 +32,17 @@
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="dataInicio" placeholder="Data de Inicio">
+					<input class="input1" type="text" name="dataInicio" placeholder="Data de Início">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomeNutri" placeholder="Nome nutricionista">
+					<input class="input1" type="text" name="nomeNutri" placeholder="Nome Nutricionista">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomePac" placeholder="Nome paciente">
+					<input class="input1" type="text" name="nomePac" placeholder="Nome Paciente">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1 validate-input">
@@ -49,19 +50,17 @@
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="massaG" placeholder="Massa gorda">
+					<input class="input1" type="text" name="massaG" placeholder="Massa Gorda">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="massaM" placeholder="Massa magra">
+					<input class="input1" type="text" name="massaM" placeholder="Massa Magra">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="pesoIdeal" placeholder="Peso ideal">
+					<input class="input1" type="text" name="pesoIdeal" placeholder="Peso Ideal">
 					<span class="shadow-input1"></span>
 				</div>
-
-
 
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">

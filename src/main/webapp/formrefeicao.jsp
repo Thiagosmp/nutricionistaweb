@@ -5,7 +5,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="./styles/util.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
@@ -20,7 +19,9 @@
 			</div>
 
 			<form action="controllerRefeicao" method="post" class="contact1-form validate-form">
-                <h3> Cadastro refeição</h3>
+                <div class="contact1-form-title">
+                	<h3>Cadastrando Refeição</h3>
+                </div>
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="cafe1" placeholder="Café da manhã 1">
 					<span class="shadow-input1"></span>
@@ -50,7 +51,7 @@
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">
 						<span>
-							Cadastrar refeição
+							Cadastrar Refeição
 							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
 						</span>
 					</button>
