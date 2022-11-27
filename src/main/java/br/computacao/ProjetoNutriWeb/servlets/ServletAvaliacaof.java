@@ -57,7 +57,6 @@ public class ServletAvaliacaof extends HttpServlet {
 		}else {
 			long avaliacaofid = Long.parseLong(request.getParameter("avaliacaofid"));
 			AvaliaFisica avaliaFisica = dao.findById(AvaliaFisica.class, avaliacaofid).get();
-			
 			avaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			avaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			avaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
