@@ -27,8 +27,6 @@
 				<th>Peso</th>
 				<th>Altura</th>
 				<th>Data Inicio</th>
-				<th>Nome Nutricionista</th>
-				<th>Nome Paciente</th>
 				<th>IMC</th>
 				<th>Massa G</th>
 				<th>Massa M</th>
@@ -45,8 +43,6 @@
 				<td><%= avaliaFisica.getPeso()%></td>
 				<td><%= avaliaFisica.getAltura()%></td>
 				<td><%= avaliaFisica.getDataInicio()%></td>
-				<td><%= avaliaFisica.getNomeNutri()%></td>
-				<td><%= avaliaFisica.getNomePac()%></td>
 				<td><%= avaliaFisica.getImc()%></td>
 				<td><%= avaliaFisica.getMassaG()%></td>
 				<td><%= avaliaFisica.getMassaM()%></td>

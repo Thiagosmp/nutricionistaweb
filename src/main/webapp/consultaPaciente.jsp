@@ -48,6 +48,9 @@
 				href="editpaciente.jsp?id=<%= paciente.getId()%>">Editar</a>
 				<a class="btn btn-danger btn-sm" 
 				href="<%= request.getContextPath()%>/controllerPaciente?id=<%=paciente.getId()%>">Excluir</a>
+				<a class="btn btn-secondary btn-sm" 
+				href="http://localhost:8080/ProjetoNutriWeb/consultaAvaliacaof.jsp">Avaliação</a>
+				<!-- editpaciente.jsp?id=<%= paciente.getId()%> -->
 				</td>
 			</tr>
 			<%

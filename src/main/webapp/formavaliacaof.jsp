@@ -1,3 +1,7 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.List"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.PacienteDao"%>
+<%@page import="br.computacao.ProjetoNutriWeb.model.Paciente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -11,7 +15,10 @@
 	<title>Cadastrar Avaliação</title>
 </head>
 <body>
-
+<%
+	PacienteDao pacienteDao = new PacienteDao();
+	List<Paciente> pacientes = pacienteDao.findAll(Paciente.class);
+%>
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
@@ -37,14 +44,17 @@
 				</div>
 
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomeNutri" placeholder="Nome Nutricionista">
-					<span class="shadow-input1"></span>
+					
+					<select name="paciente" >
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Paciente paciente:pacientes){
+						%>
+						<option value=<%=paciente.getId()%>><%=paciente.getNome() %></option>
+						<%}%>
+					</select>
 				</div>
-
-				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomePac" placeholder="Nome Paciente">
-					<span class="shadow-input1"></span>
-				</div>
+				
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="imc" placeholder="IMC">
 					<span class="shadow-input1"></span>

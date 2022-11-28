@@ -16,8 +16,6 @@ public class AvaliaFisica {
 	private float altura;
 	@Column(name = "data_inicio", columnDefinition = "DATE")
 	private LocalDate dataInicio;
-	private String nomeNutri;
-	private String nomePac;
 	private float imc;
 	private float massaG;
 	private float massaM;
@@ -53,18 +51,6 @@ public class AvaliaFisica {
 	}
 	public void setDataInicio(LocalDate dataInicio) {
 		this.dataInicio = dataInicio;
-	}
-	public String getNomeNutri() {
-		return nomeNutri;
-	}
-	public void setNomeNutri(String nomeNutri) {
-		this.nomeNutri = nomeNutri;
-	}
-	public String getNomePac() {
-		return nomePac;
-	}
-	public void setNomePac(String nomePac) {
-		this.nomePac = nomePac;
 	}
 	public float getImc() {
 		return imc;

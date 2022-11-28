@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.DateFormatter;
 
 import br.computacao.ProjetoNutriWeb.dao.AvaliacaoFisicaDao;
+import br.computacao.ProjetoNutriWeb.dao.PacienteDao;
 import br.computacao.ProjetoNutriWeb.model.AvaliaFisica;
+import br.computacao.ProjetoNutriWeb.model.Paciente;
 
 /**
  * Servlet implementation class ServletAvaliacaof
@@ -47,17 +49,19 @@ public class ServletAvaliacaof extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		AvaliacaoFisicaDao dao= new AvaliacaoFisicaDao();
+		PacienteDao pacienteDao = new PacienteDao();
 		if(request.getParameter("nutricionistaid")==null) {
+			Long pacienteid = Long.parseLong(request.getParameter("paciente"));
+			Paciente paciente = pacienteDao.findById(Paciente.class, pacienteid).get();
 			AvaliaFisica novoAvaliaFisica = new AvaliaFisica();
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			novoAvaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
-			novoAvaliaFisica.setNomeNutri(request.getParameter("nomeNutri"));
-			novoAvaliaFisica.setNomePac(request.getParameter("nomePac"));
 			novoAvaliaFisica.setImc(Float.parseFloat(request.getParameter("imc")));
 			novoAvaliaFisica.setMassaG(Float.parseFloat(request.getParameter("massaG")));
 			novoAvaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
+			novoAvaliaFisica.setPaciente(paciente);
 			dao.save(novoAvaliaFisica);
 		}else {
 			long avaliacaofid = Long.parseLong(request.getParameter("avaliacaofid"));
@@ -65,8 +69,6 @@ public class ServletAvaliacaof extends HttpServlet {
 			avaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			avaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			avaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
-			avaliaFisica.setNomeNutri(request.getParameter("nomeNutri"));
-			avaliaFisica.setNomePac(request.getParameter("nomePac"));
 			avaliaFisica.setImc(Float.parseFloat(request.getParameter("imc")));
 			avaliaFisica.setMassaG(Float.parseFloat(request.getParameter("massaG")));
 			avaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));

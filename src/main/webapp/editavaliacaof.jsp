@@ -33,12 +33,6 @@
 		<label>Data Inicio</label>
 		<input type="text" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
 		<br/>
-		<label>Nome Paciente</label>
-		<input type="text" name="nomePac" value="<%= conAvaliaFisica.getNomePac() %>" />
-		<br/>
-		<label>Nome Nutricionista</label>
-		<input type="text" name="nomeNutri" value="<%= conAvaliaFisica.getNomeNutri() %>" />
-		<br/>
 		<label>IMC</label>
 		<input type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
 		<br/>	
