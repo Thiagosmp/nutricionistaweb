@@ -49,8 +49,7 @@
 				<a class="btn btn-danger btn-sm" 
 				href="<%= request.getContextPath()%>/controllerPaciente?id=<%=paciente.getId()%>">Excluir</a>
 				<a class="btn btn-secondary btn-sm" 
-				href="http://localhost:8080/ProjetoNutriWeb/consultaAvaliacaof.jsp">Avaliação</a>
-				<!-- editpaciente.jsp?id=<%= paciente.getId()%> -->
+				href="consultaAvaliacaof.jsp?id=<%= paciente.getId()%>">Avaliação</a>
 				</td>
 			</tr>
 			<%

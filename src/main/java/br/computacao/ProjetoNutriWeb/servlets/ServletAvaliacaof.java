@@ -75,7 +75,7 @@ public class ServletAvaliacaof extends HttpServlet {
 			avaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			dao.update(avaliaFisica);
 		}
-		response.sendRedirect("consultaAvaliacaof.jsp");
+		response.sendRedirect("consultaAvaliacao.jsp");
 	}
 
 }
