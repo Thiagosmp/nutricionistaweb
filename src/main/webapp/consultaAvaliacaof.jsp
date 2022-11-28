@@ -31,6 +31,7 @@
 				<th>Massa G</th>
 				<th>Massa M</th>
 				<th>Peso Ideal</th>
+				<th>Paciente</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -47,6 +48,7 @@
 				<td><%= avaliaFisica.getMassaG()%></td>
 				<td><%= avaliaFisica.getMassaM()%></td>
 				<td><%= avaliaFisica.getPesoIdeal()%></td>
+				<td><%= avaliaFisica.getPaciente().getNome() %></td>
 				<td>
 				<a class="btn btn-secondary btn-sm" 
 				href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar</a>
