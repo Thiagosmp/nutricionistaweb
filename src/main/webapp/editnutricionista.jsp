@@ -4,14 +4,15 @@
     pageEncoding="utf-8"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Editar Nutricionista</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./css/util.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+
 </head>
 <body>
 	<%
@@ -19,31 +20,58 @@
 	NutricionistaDao dao = new NutricionistaDao();
 	Nutricionista conNutricionista = dao.findById(Nutricionista.class, nutricionistaid).get();
 	%>	
+    <div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="./images/img-01.jpg" alt="IMG">
+			</div>
 
-	<h1>Editar Nutricionista</h1>
-	
-	<form action="controllerNutricionista" method="post">
-	<input type="hidden" name="nutricionistaid" value="<%= nutricionistaid %>" />
-		
-		<label>Nome</label>
-		<input type="text" name="nome" value="<%= conNutricionista.getNome() %>" />
-		<br/>
-		<label>Email</label>
-		<input type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
-		<br/>
-		<label>Sexo</label>
-		<input type="text" name="sexo" value="<%= conNutricionista.getSexo() %>" />
-		<br/>
-		<label>Status</label>
-		<input type="radio" name="status" value="Ativo" />
-		<label for="status">Ativo</label>
-		<input type="radio" name="status" value="Inativo" />
-		<label for="status">Inativo</label>
-		
-		<br/>
-		
-		
-		<input type="submit" value="Salvar"/>
-	</form>
+			<form action="controllerNutricionista" method="post" class="contact1-form validate-form">
+				<div class="contact1-form-title">
+					<h3> Editando uma Nutricionista</h3>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="hidden" name="nutricionistaid" placeholder="<%= nutricionistaid %>">
+					<span class="shadow-input1"></span>
+				</div>
+                <div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="nome" placeholder="<%= conNutricionista.getNome() %>">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="email" placeholder="<%= conNutricionista.getEmail() %>">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="sexo">Selecione o Sexo:</label>
+				</div>
+				<div>
+					<select id="sexo" class="select-style">
+						<option value="M">Masculino</option>
+						<option value="F">Feminino</option>
+					</select>
+				</div>
+
+				<div class="select-style-title">
+					<label for="sexo" >Selecione o Status:</label>
+				</div>
+				<div class="select-style-container">
+					<select id="sexo" class="select-style">
+						<option value="M">Ativo</option>
+						<option value="F">Inativo</option>
+					</select>
+				</div>
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Salvar
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

@@ -32,12 +32,6 @@
 					<input class="input1" type="text" name="email" placeholder="Email">
 					<span class="shadow-input1"></span>
 				</div>
-
-				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="sexo" placeholder="Sexo">
-					<span class="shadow-input1"></span>
-				</div>
-
 				<div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="idade" placeholder="Idade">
 					<span class="shadow-input1"></span>
@@ -45,6 +39,12 @@
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="tel" placeholder="Telefone">
 					<span class="shadow-input1"></span>
+				</div>
+				<div>
+					<select id="sexo" class="select-style">
+						<option value="M">Masculino</option>
+						<option value="F">Feminino</option>
+					</select>
 				</div>
 
 				<div class="container-contact1-form-btn">
