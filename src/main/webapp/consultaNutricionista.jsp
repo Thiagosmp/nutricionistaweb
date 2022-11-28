@@ -4,55 +4,76 @@
     pageEncoding="utf-8"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Consulta Nutricionista</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
 </head>
 <body>
 	<%
 	NutricionistaDao dao = new NutricionistaDao();
 	List<Nutricionista> nutricionistas = dao.findAll(Nutricionista.class);
 	%>	
-<div class="container">
-	<a  class="btn btn-primary" href="formnutricionista.jsp">Novo(a) Nutricionista</a>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Nome</th>
-				<th>Email</th>
-				<th>Sexo</th>
-				<th>Status</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-			for(Nutricionista nutricionista:nutricionistas){
-			%>
-			<tr>
-				<td><%= nutricionista.getId()%></td>
-				<td><%= nutricionista.getNome()%></td>
-				<td><%= nutricionista.getEmail()%></td>
-				<td><%= nutricionista.getSexo()%></td>
-				<td><%= nutricionista.getStatus()%></td>
-				<td>
-				<a class="btn btn-secondary btn-sm" 
-				href="editnutricionista.jsp?id=<%= nutricionista.getId()%>">Editar</a>
-				<a class="btn btn-danger btn-sm" 
-				href="<%= request.getContextPath()%>/controllerNutricionista?id=<%=nutricionista.getId()%>">Excluir</a>
-				</td>
-			</tr>
-			<%
-			}
-			%>
-		</tbody>
-	</table>
-</div>
-</body>
-</html>
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<form class="contact1-form validate-form">
+					<h3> Cadastro Nutricionista</h3>
+			</div>
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+						  <thead class="thead-dark">
+						    <tr>
+						      <th>ID  </th>
+						      <th>nome</th>
+						      <th>Email</th>
+						      <th>Sexo</th>
+							  <th>Status</th>
+						      <th>&nbsp;</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							<%
+							for(Nutricionista nutricionista:nutricionistas){
+							%>
+							<tr>
+								<td><%= nutricionista.getId()%></td>
+								<td><%= nutricionista.getNome()%></td>
+								<td><%= nutricionista.getEmail()%></td>
+								<td><%= nutricionista.getSexo()%></td>
+								<td><%= nutricionista.getStatus()%></td>
+								<td>
+								<div class="container-contact1-form-btn">
+									<button class="contact1-form-btn">
+										<span>
+											Editar
+											<i class="fa fa-long-arrow-right" aria-hidden="true" href="editnutricionista.jsp?id=<%= nutricionista.getId()%>">Editar"></i>
+										</span>
+									</button>
+									<button>
+										<span>
+											Excluir
+											<i class="fa fa-long-arrow-right" aria-hidden="true" href="<%= request.getContextPath()%>/controllerNutricionista?id=<%=nutricionista.getId()%>">Excluir></i>
+										</span>
+									</button>
+								</div>
+								</td>
+							</tr>
+							<%
+							}
+							%>
+						</tbody>
+						</table>
+					</div>
+				</div>
+		</div>
+	</div>
+<tbody>
+		
+							
