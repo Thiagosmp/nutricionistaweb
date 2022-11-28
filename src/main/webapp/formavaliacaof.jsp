@@ -1,3 +1,5 @@
+<%@page import="br.computacao.ProjetoNutriWeb.model.Nutricionista"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.NutricionistaDao"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="java.util.List"%>
 <%@page import="br.computacao.ProjetoNutriWeb.dao.PacienteDao"%>
@@ -17,7 +19,9 @@
 <body>
 <%
 	PacienteDao pacienteDao = new PacienteDao();
+	NutricionistaDao nutricionistaDao = new NutricionistaDao();
 	List<Paciente> pacientes = pacienteDao.findAll(Paciente.class);
+	List<Nutricionista> nutricionistas = nutricionistaDao.findAll(Nutricionista.class);
 %>
 	<div class="contact1">
 		<div class="container-contact1">
@@ -44,13 +48,27 @@
 				</div>
 
 				<div class="wrap-input1 validate-input">
-					
+					<label for="paciente">Selecione o Paciente:</label>
+					</br>
 					<select name="paciente" >
 						<option value="" disabled selected>Selecione</option>
 						<%
 						for(Paciente paciente:pacientes){
 						%>
 						<option value=<%=paciente.getId()%>><%=paciente.getNome() %></option>
+						<%}%>
+					</select>
+				</div>
+				
+				<div class="wrap-input1 validate-input">
+					<label for="nutricionista">Selecione o Nutricionista:</label>
+					</br>
+					<select name="nutricionista" >
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Nutricionista nutricionista:nutricionistas){
+						%>
+						<option value=<%=nutricionista.getId()%>><%=nutricionista.getNome() %></option>
 						<%}%>
 					</select>
 				</div>

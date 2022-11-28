@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.DateFormatter;
 
 import br.computacao.ProjetoNutriWeb.dao.AvaliacaoFisicaDao;
+import br.computacao.ProjetoNutriWeb.dao.NutricionistaDao;
 import br.computacao.ProjetoNutriWeb.dao.PacienteDao;
 import br.computacao.ProjetoNutriWeb.model.AvaliaFisica;
+import br.computacao.ProjetoNutriWeb.model.Nutricionista;
 import br.computacao.ProjetoNutriWeb.model.Paciente;
 
 /**
@@ -50,9 +52,12 @@ public class ServletAvaliacaof extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		AvaliacaoFisicaDao dao= new AvaliacaoFisicaDao();
 		PacienteDao pacienteDao = new PacienteDao();
+		NutricionistaDao nutricionistaDao = new NutricionistaDao();
 		if(request.getParameter("nutricionistaid")==null) {
 			Long pacienteid = Long.parseLong(request.getParameter("paciente"));
+			Long nutricionistaid = Long.parseLong(request.getParameter("nutricionista"));
 			Paciente paciente = pacienteDao.findById(Paciente.class, pacienteid).get();
+			Nutricionista nutricionista = nutricionistaDao.findById(Nutricionista.class, nutricionistaid).get();
 			AvaliaFisica novoAvaliaFisica = new AvaliaFisica();
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
@@ -62,6 +67,7 @@ public class ServletAvaliacaof extends HttpServlet {
 			novoAvaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			novoAvaliaFisica.setPaciente(paciente);
+			novoAvaliaFisica.setNutricionista(nutricionista);
 			dao.save(novoAvaliaFisica);
 		}else {
 			long avaliacaofid = Long.parseLong(request.getParameter("avaliacaofid"));
