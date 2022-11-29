@@ -4,42 +4,49 @@
     pageEncoding="utf-8"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-	crossorigin="anonymous">
-<title>Consulta Avaliação</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
 </head>
 <body>
 	<%
 	AvaliacaoFisicaDao dao = new AvaliacaoFisicaDao();
 	List<AvaliaFisica> avaliacoesF = dao.findAll(AvaliaFisica.class);
 	%>	
-<div class="container">
-	<a  class="btn btn-primary" href="formavaliacaof.jsp">Nova Avaliação Física</a>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Peso</th>
-				<th>Altura</th>
-				<th>Data Inicio</th>
-				<th>Nome Nutricionista</th>
-				<th>Nome Paciente</th>
-				<th>IMC</th>
-				<th>Massa G</th>
-				<th>Massa M</th>
-				<th>Peso Ideal</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-			for(AvaliaFisica avaliaFisica:avaliacoesF){
-			%>
+<div class="contact1">
+			<div class="container-contact1">
+				<div class="contact1-pic js-tilt" data-tilt>
+					<form class="contact1-form validate-form">
+						<h3> Consultar Avaliações Físicas</h3>
+				</div>
+					<div class="col-md-12">
+						<div class="table-wrap">
+							<table class="table">
+							  <thead class="thead-dark">
+							    <tr>
+									<th>ID</th>
+									<th>Peso</th>
+									<th>Altura</th>
+									<th>Data Inicio</th>
+									<th>Nome Nutricionista</th>
+									<th>Nome Paciente</th>
+									<th>IMC</th>
+									<th>Massa G</th>
+									<th>Massa M</th>
+									<th>Peso Ideal</th>
+									<th></th>
+								</tr>
+							   </thead>
+						<tbody>
+						<%
+						for(AvaliaFisica avaliaFisica:avaliacoesF){
+						%>
 			<tr>
 				<td><%= avaliaFisica.getId()%></td>
 				<td><%= avaliaFisica.getPeso()%></td>
@@ -52,10 +59,20 @@
 				<td><%= avaliaFisica.getMassaM()%></td>
 				<td><%= avaliaFisica.getPesoIdeal()%></td>
 				<td>
-				<a class="btn btn-secondary btn-sm" 
-				href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar</a>
-				<a class="btn btn-danger btn-sm" 
-				href="<%= request.getContextPath()%>/controlleravaliacaof?id=<%=avaliaFisica.getId()%>">Excluir</a>
+					<div class="container-contact1-form-btn">
+							<button class="contact1-form-btn">
+								<span>
+									Editar
+										<i class="fa fa-long-arrow-right" aria-hidden="true" href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar"></i>
+								</span>
+							</button>
+							<button>
+								 <span>
+									Excluir
+										<i class="fa fa-long-arrow-right" aria-hidden="true" href="<%= request.getContextPath()%>/controlleravaliacaof?id=<%=avaliaFisica.getId()%>">Excluir></i>
+								 </span>
+							</button>
+					</div>
 				</td>
 			</tr>
 			<%

@@ -23,7 +23,7 @@
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
 				<form class="contact1-form validate-form">
-					<h3> Cadastro Nutricionista</h3>
+					<h3> Consulta Nutricionista</h3>
 			</div>
 				<div class="col-md-12">
 					<div class="table-wrap">
@@ -74,6 +74,5 @@
 				</div>
 		</div>
 	</div>
-<tbody>
-		
+</body>
 							
