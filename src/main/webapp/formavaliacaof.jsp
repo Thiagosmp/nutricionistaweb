@@ -75,10 +75,6 @@
 					</select>
 					<br>
 				</div>
-                <div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="imc" placeholder="IMC">
-					<span class="shadow-input1"></span>
-				</div>
 				<div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="massaG" placeholder="Massa Gorda">
 					<span class="shadow-input1"></span>

@@ -53,16 +53,20 @@ public class ServletAvaliacaof extends HttpServlet {
 		AvaliacaoFisicaDao dao= new AvaliacaoFisicaDao();
 		PacienteDao pacienteDao = new PacienteDao();
 		NutricionistaDao nutricionistaDao = new NutricionistaDao();
-		if(request.getParameter("nutricionistaid")==null) {
+		if(request.getParameter("avaliacaofid")==null) {
 			Long pacienteid = Long.parseLong(request.getParameter("paciente"));
 			Long nutricionistaid = Long.parseLong(request.getParameter("nutricionista"));
 			Paciente paciente = pacienteDao.findById(Paciente.class, pacienteid).get();
 			Nutricionista nutricionista = nutricionistaDao.findById(Nutricionista.class, nutricionistaid).get();
 			AvaliaFisica novoAvaliaFisica = new AvaliaFisica();
+			Float altura = Float.parseFloat(request.getParameter("altura"));
+			Float peso = Float.parseFloat(request.getParameter("peso"));
+			Float imc = peso/(altura*altura);
+			System.out.println(imc);
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			novoAvaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
-			novoAvaliaFisica.setImc(Float.parseFloat(request.getParameter("imc")));
+			novoAvaliaFisica.setImc(imc);
 			novoAvaliaFisica.setMassaG(Float.parseFloat(request.getParameter("massaG")));
 			novoAvaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));

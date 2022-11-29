@@ -27,7 +27,7 @@
 		<div class="container-contact1">
 			
 			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
-			<input type="hidden" name="avaliacaofid" value="<%= avaliacaofid %>" />
+			<input type="hidden" name="avaliacaofid" value="<%= conAvaliaFisica.getId() %>" />
 				
 				<div class="wrap-input1 validate-input">
 					<label>Peso</label>
@@ -42,16 +42,6 @@
 				<div class="wrap-input1 validate-input">
 					<label>Data Início</label>
 					<input class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<label>Paciente</label>
-					<input class="input1" type="text" name="paciente" value="<%= conAvaliaFisica.getPaciente().getNome() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<label>Nutricionista</label>
-					<input class="input1" type="text" name="nutricionista" value="<%= conAvaliaFisica.getNutricionista().getNome() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">

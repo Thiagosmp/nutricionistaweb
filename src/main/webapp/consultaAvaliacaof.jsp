@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="br.computacao.ProjetoNutriWeb.model.AvaliaFisica"%>
 <%@page import="br.computacao.ProjetoNutriWeb.dao.AvaliacaoFisicaDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -17,7 +18,13 @@
 <body>
 	<%
 	AvaliacaoFisicaDao dao = new AvaliacaoFisicaDao();
-	List<AvaliaFisica> avaliacoesF = dao.findAll(AvaliaFisica.class);
+	Long id = Long.parseLong(request.getParameter("id"));
+	List<Long> avaliacoesid = dao.getPacientesByAvaliacaoId(id);
+	List<AvaliaFisica> avaliacoes = new ArrayList<AvaliaFisica>();
+	for(Long avaliacaoid:avaliacoesid){
+		AvaliaFisica avaliacaoFind=dao.findById(AvaliaFisica.class, avaliacaoid).get();
+		avaliacoes.add(avaliacaoFind);
+	}
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
@@ -40,7 +47,7 @@
 					</thead>
 					<tbody>
 						<%
-						for(AvaliaFisica avaliaFisica:avaliacoesF){
+						for(AvaliaFisica avaliaFisica:avaliacoes){
 						%>
 						<tr>
 							<td><%= avaliaFisica.getId()%></td>
