@@ -61,14 +61,22 @@ public class ServletAvaliacaof extends HttpServlet {
 			AvaliaFisica novoAvaliaFisica = new AvaliaFisica();
 			Float altura = Float.parseFloat(request.getParameter("altura"));
 			Float peso = Float.parseFloat(request.getParameter("peso"));
-			Float imc = (altura*altura)/peso;
+			Float imc = peso/(altura*altura);
 			System.out.println(imc);
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
+			novoAvaliaFisica.setIdade(Integer.parseInt(request.getParameter("idade")));
 			novoAvaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
 			novoAvaliaFisica.setImc(imc);
-			novoAvaliaFisica.setMassaG(Float.parseFloat(request.getParameter("massaG")));
-			novoAvaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));
+			Integer idade = (Integer.parseInt(request.getParameter("idade")));
+			Double porGordura=0.0;
+			if(paciente.getSexo()=='F') {
+				porGordura = (1.20*imc)+(0.23*idade)-(10.8*0)-5.4;
+			}else {
+				porGordura = (1.20*imc)+(0.23*idade)-(10.8*1)-5.4;
+			}
+			novoAvaliaFisica.setMassaG(porGordura);
+			novoAvaliaFisica.setMassaM(Double.parseDouble(request.getParameter("massaM")));
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			novoAvaliaFisica.setPaciente(paciente);
 			novoAvaliaFisica.setNutricionista(nutricionista);
@@ -80,8 +88,8 @@ public class ServletAvaliacaof extends HttpServlet {
 			avaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			avaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
 			avaliaFisica.setImc(Float.parseFloat(request.getParameter("imc")));
-			avaliaFisica.setMassaG(Float.parseFloat(request.getParameter("massaG")));
-			avaliaFisica.setMassaM(Float.parseFloat(request.getParameter("massaM")));
+			avaliaFisica.setMassaG(Double.parseDouble(request.getParameter("massaG")));
+			avaliaFisica.setMassaM(Double.parseDouble(request.getParameter("massaM")));
 			avaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			dao.update(avaliaFisica);
 		}

@@ -32,9 +32,9 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th>ID</th>
 							<th>Peso</th>
 							<th>Altura</th>
+							<th>Idade</th>
 							<th>Data Inicio</th>
 							<th>IMC</th>
 							<th>Massa G</th>
@@ -50,12 +50,12 @@
 						for(AvaliaFisica avaliaFisica:avaliacoes){
 						%>
 						<tr>
-							<td><%= avaliaFisica.getId()%></td>
 							<td><%= avaliaFisica.getPeso()%></td>
 							<td><%= avaliaFisica.getAltura()%></td>
+							<td><%= avaliaFisica.getIdade() %></td>
 							<td><%= avaliaFisica.getDataInicio()%></td>
 							<td><%= avaliaFisica.getImc()%></td>
-							<td><%= avaliaFisica.getMassaG()%></td>
+							<td><%= avaliaFisica.getMassaG() %></td>
 							<td><%= avaliaFisica.getMassaM()%></td>
 							<td><%= avaliaFisica.getPesoIdeal()%></td>
 							<td><%= avaliaFisica.getPaciente().getNome() %></td>

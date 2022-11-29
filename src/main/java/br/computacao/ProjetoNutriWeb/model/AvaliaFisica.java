@@ -20,9 +20,10 @@ public class AvaliaFisica {
 	@Column(name = "data_inicio", columnDefinition = "DATE")
 	private LocalDate dataInicio;
 	private float imc;
-	private float massaG;
-	private float massaM;
+	private Double massaG;
+	private Double massaM;
 	private float pesoIdeal;
+	private int idade;
 	@ManyToOne
 	private Nutricionista nutricionista;
 	@ManyToOne
@@ -62,16 +63,16 @@ public class AvaliaFisica {
 	public void setImc(float imc) {
 		this.imc = imc;
 	}
-	public float getMassaG() {
+	public Double getMassaG() {
 		return massaG;
 	}
-	public void setMassaG(float massaG) {
+	public void setMassaG(Double massaG) {
 		this.massaG = massaG;
 	}
-	public float getMassaM() {
+	public Double getMassaM() {
 		return massaM;
 	}
-	public void setMassaM(float massaM) {
+	public void setMassaM(Double massaM) {
 		this.massaM = massaM;
 	}
 	public float getPesoIdeal() {
@@ -91,6 +92,12 @@ public class AvaliaFisica {
 	}
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 	
 	

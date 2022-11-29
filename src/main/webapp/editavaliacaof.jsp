@@ -40,6 +40,11 @@
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
+					<label>Idade</label>
+					<input class="input1" type="text" name="idade" value="<%= conAvaliaFisica.getIdade() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
 					<label>Data Início</label>
 					<input class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
 					<span class="shadow-input1"></span>
