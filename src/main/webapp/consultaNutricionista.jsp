@@ -11,6 +11,7 @@
 	rel="stylesheet" 
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 <title>Consultar Nutricionista</title>
 </head>
 <body>
@@ -18,41 +19,43 @@
 	NutricionistaDao dao = new NutricionistaDao();
 	List<Nutricionista> nutricionistas = dao.findAll(Nutricionista.class);
 	%>	
-<div class="container">
-	<a  class="btn btn-primary" href="formnutricionista.jsp">Cadastrar Nutricionista</a>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Nome</th>
-				<th>Email</th>
-				<th>Sexo</th>
-				<th>Status</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-			for(Nutricionista nutricionista:nutricionistas){
-			%>
-			<tr>
-				<td><%= nutricionista.getId()%></td>
-				<td><%= nutricionista.getNome()%></td>
-				<td><%= nutricionista.getEmail()%></td>
-				<td><%= nutricionista.getSexo()%></td>
-				<td><%= nutricionista.getStatus()%></td>
-				<td>
-				<a class="btn btn-secondary btn-sm" 
-				href="editnutricionista.jsp?id=<%= nutricionista.getId()%>">Editar</a>
-				<a class="btn btn-danger btn-sm" 
-				href="<%= request.getContextPath()%>/controllerNutricionista?id=<%=nutricionista.getId()%>">Excluir</a>
-				</td>
-			</tr>
-			<%
-			}
-			%>
-		</tbody>
-	</table>
-</div>
+		<div class="contact1">
+			<div class="container-contact1">
+				<a  class="btn btn-primary" href="formnutricionista.jsp">Cadastrar Nutricionista</a>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+							<th>Email</th>
+							<th>Sexo</th>
+							<th>Status</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<%
+						for(Nutricionista nutricionista:nutricionistas){
+						%>
+						<tr>
+							<td><%= nutricionista.getId()%></td>
+							<td><%= nutricionista.getNome()%></td>
+							<td><%= nutricionista.getEmail()%></td>
+							<td><%= nutricionista.getSexo()%></td>
+							<td><%= nutricionista.getStatus()%></td>
+							<td>
+							<a class="btn btn-secondary btn-sm" 
+							href="editnutricionista.jsp?id=<%= nutricionista.getId()%>">Editar</a>
+							<a class="btn btn-danger btn-sm" 
+							href="<%= request.getContextPath()%>/controllerNutricionista?id=<%=nutricionista.getId()%>">Excluir</a>
+							</td>
+						</tr>
+						<%
+						}
+						%>
+					</tbody>
+				</table>
+			</div>
+		</div>
 </body>
 </html>

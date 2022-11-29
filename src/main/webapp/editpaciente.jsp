@@ -11,6 +11,9 @@
 	rel="stylesheet" 
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 <title>Editar Paciente</title>
 </head>
 <body>
@@ -20,33 +23,45 @@
 	Paciente conPaciente = dao.findById(Paciente.class, pacienteid).get();
 	%>	
 	
-	<h1>Editar Paciente</h1>
-	
-	<form action="controllerPaciente" method="post">
-	<input type="hidden" name="pacienteid" value="<%= pacienteid %>" />
-		
-		<label>Nome</label>
-		<input type="text" name="nome" value="<%= conPaciente.getNome() %>" />
-		<br/>
-		<label>Email</label>
-		<input type="text" name="email" value="<%= conPaciente.getEmail() %>" />
-		<br/>
-		<div class="select-style-title" style="margin-top: -11px;">
-			<label for="sexo">Selecione o Sexo:</label>
+	<h1 style="text-align:center;">Editar Paciente</h1>
+	<div class="contact1">
+		<div class="container-contact1">
+			<form action="controllerPaciente" method="post" class="contact1-form validate-form">
+			<input type="hidden" name="pacienteid" value="<%= pacienteid %>" />
+				
+				<div class="wrap-input1 validate-input">
+					<label>Nome</label>
+					<input class="input1" type="text" name="nome" value="<%= conPaciente.getNome() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<label>Email</label>
+					<input class="input1" type="text" name="email" value="<%= conPaciente.getEmail() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="sexo">Selecione o Sexo:</label>
+				</div>
+				<div>
+					<select id="sexo" name="sexo" class="select-style">
+						<option  value="M">Masculino</option>
+						<option  value="F">Feminino</option>
+					</select>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<label>Idade</label>
+					<input class="input1" type="text" name="idade" value="<%= conPaciente.getIdade() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<label>Telefone</label>
+					<input class="input1" type="text" name="tel" value="<%= conPaciente.getTel() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				
+				<input class="btn btn-primary" type="submit" value="Salvar"/>
+			</form>
 		</div>
-		<div>
-			<select id="sexo" name="sexo" class="select-style">
-				<option  value="M">Masculino</option>
-				<option  value="F">Feminino</option>
-			</select>
-		</div>
-		<label>Idade</label>
-		<input type="text" name="idade" value="<%= conPaciente.getIdade() %>" />
-		<br/>
-		<label>Telefone</label>
-		<input type="text" name="tel" value="<%= conPaciente.getTel() %>" />
-		<br/>
-		<input type="submit" value="Salvar"/>
-	</form>
+	</div>
 </body>
 </html>
