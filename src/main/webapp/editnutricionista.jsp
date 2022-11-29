@@ -11,6 +11,9 @@
 	rel="stylesheet" 
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./styles/util.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 <title>Editar Nutricionista</title>
 </head>
 <body>
@@ -20,30 +23,44 @@
 	Nutricionista conNutricionista = dao.findById(Nutricionista.class, nutricionistaid).get();
 	%>	
 
-	<h1>Editar Nutricionista</h1>
+	<h1 style="text-align:center;">Editar Nutricionista</h1>
+	<div class="contact1">
+		<div class="container-contact1">
 	
-	<form action="controllerNutricionista" method="post">
-	<input type="hidden" name="nutricionistaid" value="<%= nutricionistaid %>" />
-		
-		<label>Nome</label>
-		<input type="text" name="nome" value="<%= conNutricionista.getNome() %>" />
-		<br/>
-		<label>Email</label>
-		<input type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
-		<br/>
-		<label>Sexo</label>
-		<input type="text" name="sexo" value="<%= conNutricionista.getSexo() %>" />
-		<br/>
-		<label>Status</label>
-		<input type="radio" name="status" value="Ativo" />
-		<label for="status">Ativo</label>
-		<input type="radio" name="status" value="Inativo" />
-		<label for="status">Inativo</label>
-		
-		<br/>
-		
-		
-		<input type="submit" value="Salvar"/>
-	</form>
+			<form action="controllerNutricionista" method="post" class="contact1-form validate-form">
+			<input type="hidden" name="nutricionistaid" value="<%= nutricionistaid %>" />
+				
+				<div class="wrap-input1 validate-input">
+					<label>Nome</label>
+					<input class="input1" type="text" name="nome" value="<%= conNutricionista.getNome() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<label>Email</label>
+					<input class="input1" type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="sexo">Selecione o Sexo:</label>
+				</div>
+				<div>
+					<select id="sexo" name="sexo" class="select-style">
+						<option  value="M">Masculino</option>
+						<option  value="F">Feminino</option>
+					</select>
+				</div>
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="status">Selecione o Status:</label>
+				</div>
+				<div>
+					<select id="status" name="status" class="select-style">
+						<option  value="Ativo">Ativo</option>
+						<option  value="Inativo">Inativo</option>
+					</select>
+				</div>
+				<input class="btn btn-primary" type="submit" value="Salvar"/>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

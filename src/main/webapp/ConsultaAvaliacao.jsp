@@ -18,13 +18,8 @@
 <body>
 	<%
 	AvaliacaoFisicaDao dao = new AvaliacaoFisicaDao();
-	Long id = Long.parseLong(request.getParameter("id"));
-	List<Long> avaliacoesid = dao.getPacientesByAvaliacaoId(id);
-	List<AvaliaFisica> avaliacoes = new ArrayList<AvaliaFisica>();
-	for(Long avaliacaoid:avaliacoesid){
-		AvaliaFisica avaliacaoFind=dao.findById(AvaliaFisica.class, avaliacaoid).get();
-		avaliacoes.add(avaliacaoFind);
-	}
+	List<AvaliaFisica> avaliacoes = dao.findAll(AvaliaFisica.class);
+	
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
@@ -55,7 +50,7 @@
 							<td><%= avaliaFisica.getIdade() %></td>
 							<td><%= avaliaFisica.getDataInicio()%></td>
 							<td><%= avaliaFisica.getImc()%></td>
-							<td><%= avaliaFisica.getMassaG() %></td>
+							<td><%= avaliaFisica.getMassaG()%></td>
 							<td><%= avaliaFisica.getMassaM()%></td>
 							<td><%= avaliaFisica.getPesoIdeal()%></td>
 							<td><%= avaliaFisica.getPaciente().getNome() %></td>

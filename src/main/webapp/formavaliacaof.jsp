@@ -1,3 +1,9 @@
+<%@page import="br.computacao.ProjetoNutriWeb.model.Nutricionista"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.NutricionistaDao"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.List"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.PacienteDao"%>
+<%@page import="br.computacao.ProjetoNutriWeb.model.Paciente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -5,24 +11,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="./styles/util.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
-
+	<title>Cadastrar Avaliação</title>
 </head>
 <body>
-
+<%
+	PacienteDao pacienteDao = new PacienteDao();
+	NutricionistaDao nutricionistaDao = new NutricionistaDao();
+	List<Paciente> pacientes = pacienteDao.findAll(Paciente.class);
+	List<Nutricionista> nutricionistas = nutricionistaDao.findAll(Nutricionista.class);
+%>
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="./images/img-04.jpg" alt="IMG">
+				<img src="./images/img-04.png" alt="IMG">
 			</div>
 
 			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
-                <div class="contact1-form-title">
-					<h3>Avaliação Paciente</h3>
-				</div>
+               	<div class="contact1-form-title">
+                	<h3>Cadastrando Avaliação Física</h3>
+                </div>
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="peso" placeholder="Peso">
 					<span class="shadow-input1"></span>
@@ -33,37 +43,50 @@
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="dataInicio" placeholder="Data de Inicio">
+					<input class="input1" type="text" name="idade" placeholder="Idade">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="date" name="dataInicio" placeholder="Data de Início">
 					<span class="shadow-input1"></span>
 				</div>
 
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="paciente">Selecione o Paciente:</label>
+				</div>
+				<div>
+					<select name="paciente" class="select-style" >
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Paciente paciente:pacientes){
+						%>
+						<option value=<%=paciente.getId()%>><%=paciente.getNome() %></option>
+						<%}%>
+					</select>
+				</div>
+				<br>
+				<div class="select-style-title" style="margin-top: -11px;">
+					<label for="nutricionista">Selecione o Nutricionista:</label>
+				</div>
+				<div>
+					<select name="nutricionista" class="select-style">
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Nutricionista nutricionista:nutricionistas){
+						%>
+						<option value=<%=nutricionista.getId()%>><%=nutricionista.getNome() %></option>
+						<%}%>
+					</select>
+					<br>
+				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomeNutri" placeholder="Nome nutricionista">
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="nomePac" placeholder="Nome paciente">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="imc" placeholder="IMC">
+					<input class="input1" type="text" name="massaM" placeholder="Massa Magra">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="massaG" placeholder="Massa gorda">
+					<input class="input1" type="text" name="pesoIdeal" placeholder="Peso Ideal">
 					<span class="shadow-input1"></span>
 				</div>
-				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="massaM" placeholder="Massa magra">
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="pesoIdeal" placeholder="Peso ideal">
-					<span class="shadow-input1"></span>
-				</div>
-
-
 
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">

@@ -33,7 +33,7 @@ public class ServletPaciente extends HttpServlet {
 		
 		long pacienteid = Long.parseLong(request.getParameter("id"));
 		Paciente delPaciente = dao.findById(Paciente.class, pacienteid).get();
-		
+		System.out.println(pacienteid+"sadasfsagasgasgdasgasgasgasgsagasgasg");
 		dao.delete(delPaciente);
 		response.sendRedirect("consultaPaciente.jsp");
 	}

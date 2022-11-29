@@ -15,8 +15,8 @@
                     <div class="loginContent">
                         <input type="email" name="sexo" placeholder="E-mail" />
                         <input type="password" name="sexo" placeholder="Senha" />
-                        <div class="button">
-                            LOGIN
+                        <div>
+                        <a href="http://localhost:8080/ProjetoNutriWeb/consultaPaciente.jsp"><button class="button">LOGIN</button></a>
                         </div>
                     </div>
                 </div>

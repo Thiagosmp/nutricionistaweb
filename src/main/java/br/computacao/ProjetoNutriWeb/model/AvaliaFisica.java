@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 public class AvaliaFisica {
 	@Id
@@ -16,16 +19,16 @@ public class AvaliaFisica {
 	private float altura;
 	@Column(name = "data_inicio", columnDefinition = "DATE")
 	private LocalDate dataInicio;
-	private String nomeNutri;
-	private String nomePac;
 	private float imc;
-	private float massaG;
-	private float massaM;
+	private Double massaG;
+	private Double massaM;
 	private float pesoIdeal;
+	private int idade;
 	@ManyToOne
 	private Nutricionista nutricionista;
 	@ManyToOne
 	private Paciente paciente;
+
 	
 	public AvaliaFisica() {
 		
@@ -54,34 +57,22 @@ public class AvaliaFisica {
 	public void setDataInicio(LocalDate dataInicio) {
 		this.dataInicio = dataInicio;
 	}
-	public String getNomeNutri() {
-		return nomeNutri;
-	}
-	public void setNomeNutri(String nomeNutri) {
-		this.nomeNutri = nomeNutri;
-	}
-	public String getNomePac() {
-		return nomePac;
-	}
-	public void setNomePac(String nomePac) {
-		this.nomePac = nomePac;
-	}
 	public float getImc() {
 		return imc;
 	}
 	public void setImc(float imc) {
 		this.imc = imc;
 	}
-	public float getMassaG() {
+	public Double getMassaG() {
 		return massaG;
 	}
-	public void setMassaG(float massaG) {
+	public void setMassaG(Double massaG) {
 		this.massaG = massaG;
 	}
-	public float getMassaM() {
+	public Double getMassaM() {
 		return massaM;
 	}
-	public void setMassaM(float massaM) {
+	public void setMassaM(Double massaM) {
 		this.massaM = massaM;
 	}
 	public float getPesoIdeal() {
@@ -101,6 +92,12 @@ public class AvaliaFisica {
 	}
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 	
 	
