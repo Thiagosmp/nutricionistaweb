@@ -34,7 +34,10 @@
 		<input type="text" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
 		<br/>
 		<label>Paciente</label>
-		<input type="text" name="paciente_id" value="<%= conAvaliaFisica.getPaciente().getNome() %>" />
+		<input type="text" name="paciente" value="<%= conAvaliaFisica.getPaciente().getNome() %>" />
+		<br/>
+		<label>Nutricionista</label>
+		<input type="text" name="nutricionista" value="<%= conAvaliaFisica.getNutricionista().getNome() %>" />
 		<br/>
 		<label>IMC</label>
 		<input type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
