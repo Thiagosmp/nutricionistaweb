@@ -43,7 +43,7 @@ public class ServletAvaliacaof extends HttpServlet {
 		AvaliaFisica delAvaliacaof = dao.findById(AvaliaFisica.class, avaliacaofid).get();
 		
 		dao.delete(delAvaliacaof);
-		response.sendRedirect("consultaAvaliacaof.jsp");
+		response.sendRedirect("ConsultaAvaliacao.jsp");
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class ServletAvaliacaof extends HttpServlet {
 			AvaliaFisica novoAvaliaFisica = new AvaliaFisica();
 			Float altura = Float.parseFloat(request.getParameter("altura"));
 			Float peso = Float.parseFloat(request.getParameter("peso"));
-			Float imc = peso/(altura*altura);
+			Float imc = (altura*altura)/peso;
 			System.out.println(imc);
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
@@ -85,7 +85,7 @@ public class ServletAvaliacaof extends HttpServlet {
 			avaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			dao.update(avaliaFisica);
 		}
-		response.sendRedirect("consultaAvaliacaof.jsp");
+		response.sendRedirect("ConsultaAvaliacao.jsp");
 	}
 
 }

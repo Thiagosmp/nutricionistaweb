@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 public class AvaliaFisica {
 	@Id
@@ -24,6 +27,7 @@ public class AvaliaFisica {
 	private Nutricionista nutricionista;
 	@ManyToOne
 	private Paciente paciente;
+
 	
 	public AvaliaFisica() {
 		
