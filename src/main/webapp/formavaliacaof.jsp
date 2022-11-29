@@ -47,10 +47,11 @@
 					<span class="shadow-input1"></span>
 				</div>
 
-				<div class="wrap-input1 validate-input">
+				<div class="select-style-title" style="margin-top: -11px;">
 					<label for="paciente">Selecione o Paciente:</label>
-					</br>
-					<select name="paciente" >
+				</div>
+				<div>
+					<select name="paciente" class="select-style" >
 						<option value="" disabled selected>Selecione</option>
 						<%
 						for(Paciente paciente:pacientes){
@@ -59,11 +60,12 @@
 						<%}%>
 					</select>
 				</div>
-				
-				<div class="wrap-input1 validate-input">
+				<br>
+				<div class="select-style-title" style="margin-top: -11px;">
 					<label for="nutricionista">Selecione o Nutricionista:</label>
-					</br>
-					<select name="nutricionista" >
+				</div>
+				<div>
+					<select name="nutricionista" class="select-style">
 						<option value="" disabled selected>Selecione</option>
 						<%
 						for(Nutricionista nutricionista:nutricionistas){
@@ -71,8 +73,8 @@
 						<option value=<%=nutricionista.getId()%>><%=nutricionista.getNome() %></option>
 						<%}%>
 					</select>
+					<br>
 				</div>
-				
                 <div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="imc" placeholder="IMC">
 					<span class="shadow-input1"></span>
