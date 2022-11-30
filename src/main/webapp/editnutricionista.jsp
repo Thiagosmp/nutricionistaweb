@@ -31,18 +31,15 @@
 			<input type="hidden" name="nutricionistaid" value="<%= nutricionistaid %>" />
 				
 				<div class="wrap-input1 validate-input">
-					<label>Nome</label>
-					<input class="input1" type="text" name="nome" value="<%= conNutricionista.getNome() %>" />
+					<input placeholder="Nome" class="input1" type="text" name="nome" value="<%= conNutricionista.getNome() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Email</label>
-					<input class="input1" type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
+					<input placeholder="E-mail" class="input1" type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Password</label>
-					<input class="input1" type="password" name="password" value="<%= conNutricionista.getPassword() %>" />
+					<input placeholder="Password" class="input1" type="password" name="password" value="<%= conNutricionista.getPassword() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="select-style-title" style="margin-top: -11px;">

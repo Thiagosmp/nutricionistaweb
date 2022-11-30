@@ -69,14 +69,19 @@ public class ServletAvaliacaof extends HttpServlet {
 			novoAvaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
 			novoAvaliaFisica.setImc(imc);
 			Integer idade = (Integer.parseInt(request.getParameter("idade")));
-			Double porGordura=0.0;
-			if(paciente.getSexo()=='F') {
-				porGordura = (1.20*imc)+(0.23*idade)-(10.8*0)-5.4;
+			Double porGordura = 0.0;
+			if(paciente.getSexo() == 'F') {
+				porGordura = (1.20 * imc)+(0.23 * idade)-(10.8 * 0)-5.4;
 			}else {
-				porGordura = (1.20*imc)+(0.23*idade)-(10.8*1)-5.4;
+				porGordura = (1.20 * imc)+(0.23 * idade)-(10.8 * 1)-5.4;
 			}
-			novoAvaliaFisica.setMassaG(porGordura);
-			novoAvaliaFisica.setMassaM(Double.parseDouble(request.getParameter("massaM")));
+
+			Double Massa = porGordura * 0.01;
+			Double MassaGorda = peso * Massa;
+			Double MassaMagra = peso - _MassaMagra;
+
+			novoAvaliaFisica.setMassaG(MassaGorda);
+			novoAvaliaFisica.setMassaM(MassaMagra);
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			novoAvaliaFisica.setPaciente(paciente);
 			novoAvaliaFisica.setNutricionista(nutricionista);

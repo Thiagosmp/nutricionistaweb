@@ -30,42 +30,34 @@
 			<input type="hidden" name="avaliacaofid" value="<%= conAvaliaFisica.getId() %>" />
 				
 				<div class="wrap-input1 validate-input">
-					<label>Peso</label>
-					<input class="input1" type="text" name="peso" value="<%= conAvaliaFisica.getPeso() %>" />
+					<input placeholder="Peso" class="input1" type="text" name="peso" value="<%= conAvaliaFisica.getPeso() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Altura</label>
-					<input class="input1" type="text" name="altura" value="<%= conAvaliaFisica.getAltura() %>" />
+					<input placeholder="Altura" class="input1" type="text" name="altura" value="<%= conAvaliaFisica.getAltura() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Idade</label>
-					<input class="input1" type="text" name="idade" value="<%= conAvaliaFisica.getIdade() %>" />
+					<input placeholder="Idade" class="input1" type="text" name="idade" value="<%= conAvaliaFisica.getIdade() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Data Início</label>
-					<input class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
+					<input placeholder="Data Início" class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>IMC</label>
-					<input class="input1" type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
+					<input placeholder="IMC" class="input1" type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Massa Gorda</label>
-					<input class="input1" type="text" name="massaG" value="<%= conAvaliaFisica.getMassaG() %>" />
+					<input placeholder="Massa Gorda" class="input1" type="text" name="massaG" value="<%= conAvaliaFisica.getMassaG() %>" />
 					<span class="shadow-input1"></span>
 				</div>	
 				<div class="wrap-input1 validate-input">
-					<label>Massa Magra</label>
-					<input class="input1" type="text" name="massaM" value="<%= conAvaliaFisica.getMassaM() %>" />
+					<input placeholder="Massa Magra" class="input1" type="text" name="massaM" value="<%= conAvaliaFisica.getMassaM() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Peso Ideal</label>
-					<input class="input1" type="text" name="pesoIdeal" value="<%= conAvaliaFisica.getPesoIdeal() %>" />
+					<input placeholder="Peso Ideal" class="input1" type="text" name="pesoIdeal" value="<%= conAvaliaFisica.getPesoIdeal() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 					<br/>	
