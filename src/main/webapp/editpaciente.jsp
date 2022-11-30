@@ -30,13 +30,11 @@
 			<input type="hidden" name="pacienteid" value="<%= pacienteid %>" />
 				
 				<div class="wrap-input1 validate-input">
-					<label>Nome</label>
-					<input class="input1" type="text" name="nome" value="<%= conPaciente.getNome() %>" />
+					<input placeholder="Nome" class="input1" type="text" name="nome" value="<%= conPaciente.getNome() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Email</label>
-					<input class="input1" type="text" name="email" value="<%= conPaciente.getEmail() %>" />
+					<input placeholder="E-mail" class="input1" type="text" name="email" value="<%= conPaciente.getEmail() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="select-style-title" style="margin-top: -11px;">
@@ -49,13 +47,11 @@
 					</select>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Idade</label>
-					<input class="input1" type="text" name="idade" value="<%= conPaciente.getIdade() %>" />
+					<input placeholder="Idade" class="input1" type="text" name="idade" value="<%= conPaciente.getIdade() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Telefone</label>
-					<input class="input1" type="text" name="tel" value="<%= conPaciente.getTel() %>" />
+					<input placeholder="Telefone" class="input1" type="text" name="tel" value="<%= conPaciente.getTel() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				

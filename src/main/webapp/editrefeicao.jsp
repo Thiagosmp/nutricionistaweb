@@ -35,33 +35,27 @@
 			<input type="hidden" name="refeicaoid" value="<%= refeicaoid %>" />
 				
 				<div class="wrap-input1 validate-input">
-					<label>Café da manhã 1</label>
-					<input class="input1" type="text" name="cafe1" value="<%= conRefeicao.getCafe1() %>" />
+					<input placeholder="Café da manhã" class="input1" type="text" name="cafe1" value="<%= conRefeicao.getCafe1() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Café da manhã 2</label>
-					<input class="input1" type="text" name="cafe2" value="<%= conRefeicao.getCafe2() %>" />
+					<input placeholder="Lanche da manhã" class="input1" type="text" name="cafe2" value="<%= conRefeicao.getCafe2() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Almoço</label>
-					<input class="input1" type="text" name="almoco" value="<%= conRefeicao.getAlmoco() %>" />
+					<input placeholder="Almoço" class="input1" type="text" name="almoco" value="<%= conRefeicao.getAlmoco() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Café da tarde 1</label>
-					<input class="input1" type="text" name=cafeT1 value="<%= conRefeicao.getCafeT1() %>" />
+					<input placeholder="Café da Tarde" class="input1" type="text" name=cafeT1 value="<%= conRefeicao.getCafeT1() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Café da tarde 2</label>
-					<input class="input1" type="text" name="cafeT2" value="<%= conRefeicao.getCafe2() %>" />
+					<input placeholder="Lanche da Tarde" class="input1" type="text" name="cafeT2" value="<%= conRefeicao.getCafe2() %>" />
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="wrap-input1 validate-input">
-					<label>Jantar</label>
-					<input class="input1" type="text" name="jantar" value="<%= conRefeicao.getJantar() %>" />
+					<input placeholder="Jantar" class="input1" type="text" name="jantar" value="<%= conRefeicao.getJantar() %>" />
 					<span class="shadow-input1"></span>
 				</div>	
 				<div>
