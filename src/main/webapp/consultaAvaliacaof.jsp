@@ -52,7 +52,6 @@
 							<th>Massa M</th>
 							<th>Peso Ideal</th>
 							<th>Paciente</th>
-							<th>Nutricionista</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -70,7 +69,6 @@
 							<td><%= avaliaFisica.getMassaM()%></td>
 							<td><%= avaliaFisica.getPesoIdeal()%></td>
 							<td><%= avaliaFisica.getPaciente().getNome() %></td>
-							<td><%= avaliaFisica.getNutricionista().getNome() %></td>
 							<td>
 								<a class="btn btn-secondary btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 								href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar</a>
