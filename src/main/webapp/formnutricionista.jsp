@@ -60,7 +60,7 @@
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn" name="method" value="method">
 						<span>
-							Cadastre-se
+							Cadastrar Nutricionista
 							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
 						</span>
 					</button>
