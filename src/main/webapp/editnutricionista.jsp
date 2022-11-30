@@ -40,6 +40,11 @@
 					<input class="input1" type="text" name="email" value="<%= conNutricionista.getEmail() %>" />
 					<span class="shadow-input1"></span>
 				</div>
+				<div class="wrap-input1 validate-input">
+					<label>Password</label>
+					<input class="input1" type="password" name="password" value="<%= conNutricionista.getPassword() %>" />
+					<span class="shadow-input1"></span>
+				</div>
 				<div class="select-style-title" style="margin-top: -11px;">
 					<label for="sexo">Selecione o Sexo:</label>
 				</div>
@@ -58,7 +63,7 @@
 						<option  value="Inativo">Inativo</option>
 					</select>
 				</div>
-				<input class="btn btn-primary" type="submit" value="Salvar"/>
+				<button class="btn btn-primary" type="submit" name="method" value="method"> Salvar </button> 
 			</form>
 		</div>
 	</div>

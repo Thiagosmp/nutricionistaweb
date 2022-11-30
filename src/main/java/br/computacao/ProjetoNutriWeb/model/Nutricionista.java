@@ -21,6 +21,7 @@ public class Nutricionista {
 	@Column(unique = true)
 	private String email;
 	private char sexo;
+	private String password;
 	@Enumerated(EnumType.STRING)
 	private Status status;
 	@OneToMany(mappedBy = "nutricionista")
@@ -58,5 +59,11 @@ public class Nutricionista {
 	}
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
