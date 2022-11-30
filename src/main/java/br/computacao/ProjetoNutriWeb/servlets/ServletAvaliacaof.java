@@ -78,7 +78,7 @@ public class ServletAvaliacaof extends HttpServlet {
 
 			Double Massa = porGordura * 0.01;
 			Double MassaGorda = peso * Massa;
-			Double MassaMagra = peso - _MassaMagra;
+			Double MassaMagra = peso - MassaGorda;
 
 			novoAvaliaFisica.setMassaG(MassaGorda);
 			novoAvaliaFisica.setMassaM(MassaMagra);
