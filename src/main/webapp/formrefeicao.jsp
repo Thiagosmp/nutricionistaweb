@@ -1,3 +1,6 @@
+<%@page import="br.computacao.ProjetoNutriWeb.model.Paciente"%>
+<%@page import="java.util.List"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.PacienteDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -11,7 +14,10 @@
 	<title>Cadastrar Refeição</title>
 </head>
 <body>
-
+<%
+PacienteDao pacienteDao = new PacienteDao();
+List<Paciente> pacientes = pacienteDao.findAll(Paciente.class);
+%>
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
@@ -46,6 +52,16 @@
 				<div class="wrap-input1 validate-input">
 					<input class="input1" type="text" name="jantar" placeholder="Jantar">
 					<span class="shadow-input1"></span>
+				</div>
+				<div>
+					<select name="paciente" class="select-style" >
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Paciente paciente:pacientes){
+						%>
+						<option value=<%=paciente.getId()%>><%=paciente.getNome() %></option>
+						<%}%>
+					</select>
 				</div>
 
 				<div class="container-contact1-form-btn">

@@ -24,8 +24,6 @@ public class Paciente{
 	private String email;
 	private char sexo;
 	private Integer idade;
-	@OneToOne
-	private Dieta dieta;
 	@OneToMany(mappedBy = "paciente")
 	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.DELETE})
 	private List<AvaliaFisica> avaliacoes;
@@ -69,13 +67,5 @@ public class Paciente{
 	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
-	public Dieta getDieta() {
-		return dieta;
-	}
-	public void setDieta(Dieta dieta) {
-		this.dieta = dieta;
-	}
-	
-	
-	
+
 }

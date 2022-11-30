@@ -44,9 +44,13 @@ public class ServletRefeicao extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PacienteDao pacienteDao = new PacienteDao();
 		RefeicaoDao dao= new RefeicaoDao();
+		Long pacienteid = Long.parseLong(request.getParameter("paciente"));
+		Paciente paciente = pacienteDao.findById(Paciente.class, pacienteid).get();
 		if(request.getParameter("refeicaoid")==null) {
 			Refeicao novaRefeicao = new Refeicao();
+			novaRefeicao.setPaciente(paciente);
 			novaRefeicao.setCafe1(request.getParameter("cafe1"));
 			novaRefeicao.setCafe2(request.getParameter("cafe2"));
 			novaRefeicao.setAlmoco(request.getParameter("almoco"));
@@ -57,6 +61,7 @@ public class ServletRefeicao extends HttpServlet {
 		}else {
 			long refeicaoid = Long.parseLong(request.getParameter("refeicaoid"));
 			Refeicao refeicao = dao.findById(Refeicao.class, refeicaoid).get();
+			refeicao.setPaciente(paciente);
 			refeicao.setCafe1(request.getParameter("cafe1"));
 			refeicao.setCafe2(request.getParameter("cafe2"));
 			refeicao.setAlmoco(request.getParameter("almoco"));

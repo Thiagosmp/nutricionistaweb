@@ -31,6 +31,11 @@
 					<input class="input1" type="text" name="email" placeholder="Email">
 					<span class="shadow-input1"></span>
 				</div>
+				
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="password" name="password" placeholder="Password">
+					<span class="shadow-input1"></span>
+				</div>
 
 				<div class="select-style-title" style="margin-top: -11px;">
 					<label for="sexo">Selecione o Sexo:</label>
@@ -53,7 +58,7 @@
 				</div>
 
 				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
+					<button class="contact1-form-btn" name="method" value="method">
 						<span>
 							Cadastrar Nutricionista
 							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>

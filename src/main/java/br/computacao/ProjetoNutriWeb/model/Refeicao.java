@@ -3,6 +3,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Refeicao {
@@ -15,6 +16,8 @@ public class Refeicao {
 	private String cafeT1;
 	private String cafeT2;
 	private String jantar;
+	@OneToOne
+	private Paciente paciente;
 	
 	public Refeicao() {
 	}
@@ -73,6 +76,14 @@ public class Refeicao {
 
 	public void setJantar(String jantar) {
 		this.jantar = jantar;
+	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
 	}
 	
 }

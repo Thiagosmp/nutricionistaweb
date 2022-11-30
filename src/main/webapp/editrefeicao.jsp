@@ -1,3 +1,5 @@
+<%@page import="br.computacao.ProjetoNutriWeb.model.Paciente"%>
+<%@page import="br.computacao.ProjetoNutriWeb.dao.PacienteDao"%>
 <%@page import="br.computacao.ProjetoNutriWeb.model.Refeicao"%>
 <%@page import="br.computacao.ProjetoNutriWeb.dao.RefeicaoDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -18,6 +20,8 @@
 </head>
 <body>
 	<%
+	PacienteDao pacienteDao = new PacienteDao();
+	List<Paciente> pacientes = pacienteDao.findAll(Paciente.class);
 	long refeicaoid = Long.parseLong(request.getParameter("id"));
 	RefeicaoDao dao = new RefeicaoDao();
 	Refeicao conRefeicao = dao.findById(Refeicao.class, refeicaoid).get();
@@ -60,6 +64,16 @@
 					<input class="input1" type="text" name="jantar" value="<%= conRefeicao.getJantar() %>" />
 					<span class="shadow-input1"></span>
 				</div>	
+				<div>
+					<select name="paciente" class="select-style" >
+						<option value="" disabled selected>Selecione</option>
+						<%
+						for(Paciente paciente:pacientes){
+						%>
+						<option value=<%=paciente.getId()%>><%=paciente.getNome() %></option>
+						<%}%>
+					</select>
+				</div>
 					<input class="btn btn-primary" type="submit" value="Salvar"/>
 			</form>
 		</div>
