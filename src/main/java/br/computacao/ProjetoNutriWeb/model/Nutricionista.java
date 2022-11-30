@@ -1,5 +1,5 @@
 package br.computacao.ProjetoNutriWeb.model;
-import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -7,6 +7,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 @Entity
 public class Nutricionista {
@@ -17,9 +21,13 @@ public class Nutricionista {
 	@Column(unique = true)
 	private String email;
 	private char sexo;
+	private String password;
 	@Enumerated(EnumType.STRING)
 	private Status status;
-	ArrayList<AvaliaFisica> avaliacaoN = new ArrayList<AvaliaFisica>();
+	@OneToMany(mappedBy = "nutricionista")
+	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.DELETE})
+	private List<AvaliaFisica> avaliacoes;
+	
 	public Nutricionista() {
 	}
 	public long getId() {
@@ -52,12 +60,10 @@ public class Nutricionista {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	public ArrayList<AvaliaFisica> getAvaliacaoN() {
-		return avaliacaoN;
+	public String getPassword() {
+		return password;
 	}
-	public void setAvaliacaoN(ArrayList<AvaliaFisica> avaliacaoN) {
-		this.avaliacaoN = avaliacaoN;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	
-	
 }
