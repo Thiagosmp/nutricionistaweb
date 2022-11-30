@@ -1,6 +1,7 @@
 package br.computacao.ProjetoNutriWeb.servlets;
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -53,6 +54,7 @@ public class ServletAvaliacaof extends HttpServlet {
 		AvaliacaoFisicaDao dao= new AvaliacaoFisicaDao();
 		PacienteDao pacienteDao = new PacienteDao();
 		NutricionistaDao nutricionistaDao = new NutricionistaDao();
+		DecimalFormat formatador = new DecimalFormat("#0.00");
 		if(request.getParameter("avaliacaofid")==null) {
 			Long pacienteid = Long.parseLong(request.getParameter("paciente"));
 			Long nutricionistaid = Long.parseLong(request.getParameter("nutricionista"));
@@ -62,13 +64,16 @@ public class ServletAvaliacaof extends HttpServlet {
 			Float altura = Float.parseFloat(request.getParameter("altura"));
 			Float peso = Float.parseFloat(request.getParameter("peso"));
 			Float imc = peso/(altura*altura);
+			String _imc = formatador.format(imc);
+			String IMC = _imc.replace(",",".");
 			System.out.println(imc);
 			novoAvaliaFisica.setPeso(Float.parseFloat(request.getParameter("peso")));
 			novoAvaliaFisica.setAltura(Float.parseFloat(request.getParameter("altura")));
 			novoAvaliaFisica.setIdade(Integer.parseInt(request.getParameter("idade")));
 			novoAvaliaFisica.setDataInicio(LocalDate.parse(request.getParameter("dataInicio")));
-			novoAvaliaFisica.setImc(imc);
+			novoAvaliaFisica.setImc(Float.parseFloat(IMC));
 			Integer idade = (Integer.parseInt(request.getParameter("idade")));
+			
 			Double porGordura = 0.0;
 			if(paciente.getSexo() == 'F') {
 				porGordura = (1.20 * imc)+(0.23 * idade)-(10.8 * 0)-5.4;
@@ -79,9 +84,15 @@ public class ServletAvaliacaof extends HttpServlet {
 			Double Massa = porGordura * 0.01;
 			Double MassaGorda = peso * Massa;
 			Double MassaMagra = peso - MassaGorda;
+			
+			String _MassaGorda = formatador.format(MassaGorda);
+			String MG = _MassaGorda.replace(",",".");
+			
+			String _MassaMagra = formatador.format(MassaMagra);
+			String MM = _MassaMagra.replace(",",".");
 
-			novoAvaliaFisica.setMassaG(MassaGorda);
-			novoAvaliaFisica.setMassaM(MassaMagra);
+			novoAvaliaFisica.setMassaG(Double.parseDouble(MG));
+			novoAvaliaFisica.setMassaM(Double.parseDouble(MM));
 			novoAvaliaFisica.setPesoIdeal(Float.parseFloat(request.getParameter("pesoIdeal")));
 			novoAvaliaFisica.setPaciente(paciente);
 			novoAvaliaFisica.setNutricionista(nutricionista);

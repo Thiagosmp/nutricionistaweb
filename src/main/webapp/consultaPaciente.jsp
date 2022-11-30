@@ -21,7 +21,9 @@
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
-				<a  class="btn btn-primary"  href="formpaciente.jsp">Cadastrar Paciente</a>
+				<div class="contact1-form-title">
+	                <h3>Consulta Paciente</h3>
+	            </div>
 				<table class="table table-bordered">
 					<thead>
 						<tr>
@@ -44,11 +46,11 @@
 							<td><%= paciente.getIdade()%></td>
 							<td><%= paciente.getTel()%></td>
 							<td>
-							<a class="btn btn-secondary btn-sm" 
+							<a class="btn btn-secondary btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="editpaciente.jsp?id=<%= paciente.getId()%>">Editar</a>
-							<a class="btn btn-danger btn-sm" 
+							<a class="btn btn-danger btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="<%= request.getContextPath()%>/controllerPaciente?id=<%=paciente.getId()%>">Excluir</a>
-							<a class="btn btn-secondary btn-sm" 
+							<a class="btn btn-secondary btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="consultaAvaliacaof.jsp?id=<%= paciente.getId()%>">Avaliação</a>
 							</td>
 						</tr>
@@ -57,6 +59,14 @@
 						%>
 					</tbody>
 				</table>
+				<a class="container-contact1-form-btn" href="formpaciente.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn">
+						<span>
+							Cadastrar Paciente
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</a>
 			</div>
 		</div>
 </body>

@@ -33,6 +33,10 @@ input {
     margin-top: 1.5rem;
     border-radius: 10px;
     width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 100%;
 }
 
 

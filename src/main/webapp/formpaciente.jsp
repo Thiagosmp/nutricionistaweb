@@ -11,9 +11,16 @@
 	<title>Cadastrar Paciente</title>
 </head>
 <body>
-
 	<div class="contact1">
 		<div class="container-contact1">
+			<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
+				<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+					<span>
+						Voltar
+						<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+					</span>
+				</button>
+			</a>
 			<div class="contact1-pic js-tilt" data-tilt>
 				<img src="./images/img-02.png" alt="IMG">
 			</div>

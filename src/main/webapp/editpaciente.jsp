@@ -23,10 +23,20 @@
 	Paciente conPaciente = dao.findById(Paciente.class, pacienteid).get();
 	%>	
 	
-	<h1 style="text-align:center;">Editar Paciente</h1>
 	<div class="contact1">
 		<div class="container-contact1">
+			<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
+				<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+					<span>
+						Voltar
+						<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+					</span>
+				</button>
+			</a>
 			<form action="controllerPaciente" method="post" class="contact1-form validate-form">
+			<div class="contact1-form-title">
+            	<h3>Editar Paciente</h3>
+            </div>
 			<input type="hidden" name="pacienteid" value="<%= pacienteid %>" />
 				
 				<div class="wrap-input1 validate-input">
@@ -55,7 +65,14 @@
 					<span class="shadow-input1"></span>
 				</div>
 				
-				<input class="btn btn-primary" type="submit" value="Salvar"/>
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Salvar
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+						</span>
+					</button>
+				</div>
 			</form>
 		</div>
 	</div>

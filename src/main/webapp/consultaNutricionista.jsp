@@ -21,6 +21,12 @@
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
+				<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+					<span>
+						Voltar
+						<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+					</span>
+				</button>
 				<a  class="btn btn-primary" href="formnutricionista.jsp">Cadastrar Nutricionista</a>
 				<table class="table table-bordered">
 					<thead>

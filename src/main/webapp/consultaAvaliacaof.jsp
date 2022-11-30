@@ -31,7 +31,14 @@
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
-				<a  class="btn btn-primary" href="formavaliacaof.jsp">Nova Avaliação Física</a>
+				<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+						<span>
+							Voltar
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+						</span>
+					</button>
+				</a>
 				<table class="table table-bordered">
 					<thead>
 						<tr>
@@ -64,9 +71,9 @@
 							<td><%= avaliaFisica.getPaciente().getNome() %></td>
 							<td><%= avaliaFisica.getNutricionista().getNome() %></td>
 							<td>
-							<a class="btn btn-secondary btn-sm" 
+							<a class="btn btn-secondary btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar</a>
-							<a class="btn btn-danger btn-sm" 
+							<a class="btn btn-danger btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="<%= request.getContextPath()%>/controlleravaliacaof?id=<%=avaliaFisica.getId()%>">Excluir</a>
 							</td>
 						</tr>
@@ -75,6 +82,14 @@
 						%>
 					</tbody>
 				</table>
+				<a class="container-contact1-form-btn" href="formavaliacaof.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn">
+						<span>
+							Nova Avaliação Física
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+						</span>
+					</button>
+				</a>
 			</div>
 		</div>
 </body>

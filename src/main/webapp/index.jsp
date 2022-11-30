@@ -15,8 +15,8 @@
                     <form class="loginContent" action="controllerNutricionista" method="post">
                         <input type="email" name="email" placeholder="E-mail" />
                         <input type="password" name="password" placeholder="Senha" />
-                        <div>
-                        	<button class="button" name="method" value="login">LOGIN</button>
+                        <div style="padding-left: 1.4rem">
+	                        <button class="button" name="method" value="login">LOGIN</button>
                         </div>
                     </form>
                 </div>

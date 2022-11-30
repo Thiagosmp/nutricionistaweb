@@ -22,46 +22,62 @@
 	AvaliacaoFisicaDao dao = new AvaliacaoFisicaDao();
 	AvaliaFisica conAvaliaFisica = dao.findById(AvaliaFisica.class, avaliacaofid).get();
 	%>
-	<h1 style="text-align:center;">Editar Avaliação</h1>
 	<div class="contact1">
 		<div class="container-contact1">
-			
+			<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
+				<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+					<span>
+						Voltar
+						<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+					</span>
+				</button>
+			</a>
 			<form action="controlleravaliacaof" method="post" class="contact1-form validate-form">
-			<input type="hidden" name="avaliacaofid" value="<%= conAvaliaFisica.getId() %>" />
-				
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Peso" class="input1" type="text" name="peso" value="<%= conAvaliaFisica.getPeso() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Altura" class="input1" type="text" name="altura" value="<%= conAvaliaFisica.getAltura() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Idade" class="input1" type="text" name="idade" value="<%= conAvaliaFisica.getIdade() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Data Início" class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="IMC" class="input1" type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Massa Gorda" class="input1" type="text" name="massaG" value="<%= conAvaliaFisica.getMassaG() %>" />
-					<span class="shadow-input1"></span>
-				</div>	
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Massa Magra" class="input1" type="text" name="massaM" value="<%= conAvaliaFisica.getMassaM() %>" />
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1 validate-input">
-					<input placeholder="Peso Ideal" class="input1" type="text" name="pesoIdeal" value="<%= conAvaliaFisica.getPesoIdeal() %>" />
-					<span class="shadow-input1"></span>
-				</div>
+				<div class="contact1-form-title">
+	               	<h3>Editar Avaliação</h3>
+	            </div>
+				<input type="hidden" name="avaliacaofid" value="<%= conAvaliaFisica.getId() %>" />
+					
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Peso" class="input1" type="text" name="peso" value="<%= conAvaliaFisica.getPeso() %>" />
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Altura" class="input1" type="text" name="altura" value="<%= conAvaliaFisica.getAltura() %>" />
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Idade" class="input1" type="text" name="idade" value="<%= conAvaliaFisica.getIdade() %>" />
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Data Início" class="input1" type="date" name="dataInicio" value="<%= conAvaliaFisica.getDataInicio() %>" />
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="IMC" class="input1" type="text" name="imc" value="<%= conAvaliaFisica.getImc() %>" />
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Massa Gorda" class="input1" type="text" name="massaG" value="<%= conAvaliaFisica.getMassaG() %>" />
+						<span class="shadow-input1"></span>
+					</div>	
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Massa Magra" class="input1" type="text" name="massaM" value="<%= conAvaliaFisica.getMassaM() %>" />
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input">
+						<input placeholder="Peso Ideal" class="input1" type="text" name="pesoIdeal" value="<%= conAvaliaFisica.getPesoIdeal() %>" />
+						<span class="shadow-input1"></span>
+					</div>
 					<br/>	
-					<input class="btn btn-primary" type="submit" value="Salvar"/>
+					<div class="container-contact1-form-btn">
+						<button class="contact1-form-btn">
+							<span>
+								Salvar
+								<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit" value="Salvar"></i>
+							</span>
+						</button>
+					</div>
 			</form>
 		</div>
 	</div>	
