@@ -91,6 +91,14 @@
 						</span>
 					</button>
 				</a>
+				<a class="container-contact1-form-btn" href="consultaRefeicao.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn">
+						<span>
+							Consultar Refeição
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+						</span>
+					</button>
+				</a>
 				<a class="container-contact1-form-btn" href="formrefeicao.jsp" style="text-decoration: none;">
 					<button class="contact1-form-btn">
 						<span>

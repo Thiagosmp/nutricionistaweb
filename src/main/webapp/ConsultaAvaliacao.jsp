@@ -23,16 +23,16 @@
 	%>	
 		<div class="contact1">
 			<div class="container-contact1">
-				<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
-					<button class="contact1-form-btn" style="position: absolute; left: 20vh; top: 6vh">
+				<table class="table table-bordered">
+					<a class="container-contact1-form-btn" href="consultaPaciente.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn" style="margin-bottom: 2rem">
 						<span>
 							Voltar
 							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
 						</span>
 					</button>
 				</a>
-				<a  class="btn btn-primary" href="formavaliacaof.jsp">Nova Avaliação Física</a>
-				<table class="table table-bordered">
+				<h2 style="margin-right: 20rem">Consultar Avaliação</h2>
 					<thead>
 						<tr>
 							<th>Peso</th>
@@ -44,7 +44,6 @@
 							<th>Massa M</th>
 							<th>Peso Ideal</th>
 							<th>Paciente</th>
-							<th>Nutricionista</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -62,7 +61,6 @@
 							<td><%= avaliaFisica.getMassaM()%></td>
 							<td><%= avaliaFisica.getPesoIdeal()%></td>
 							<td><%= avaliaFisica.getPaciente().getNome() %></td>
-							<td><%= avaliaFisica.getNutricionista().getNome() %></td>
 							<td>
 							<a class="btn btn-secondary btn-sm" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 							href="editavaliacaof.jsp?id=<%= avaliaFisica.getId()%>">Editar</a>
@@ -75,6 +73,22 @@
 						%>
 					</tbody>
 				</table>
+				<a class="container-contact1-form-btn" href="formavaliacaof.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn">
+						<span>
+							Nova Avaliação Física
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+						</span>
+					</button>
+				</a>
+				<a class="container-contact1-form-btn" href="formrefeicao.jsp" style="text-decoration: none;">
+					<button class="contact1-form-btn">
+						<span>
+							Cadastrar Refeição
+							<i class="fa fa-long-arrow-right" aria-hidden="true" type="submit"></i>
+						</span>
+					</button>
+				</a>
 			</div>
 		</div>
 </body>
