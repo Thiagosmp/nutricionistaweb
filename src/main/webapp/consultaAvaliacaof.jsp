@@ -1,3 +1,6 @@
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.math.RoundingMode"%>
+<%@page import="java.math.BigDecimal"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.computacao.ProjetoNutriWeb.model.AvaliaFisica"%>
 <%@page import="br.computacao.ProjetoNutriWeb.dao.AvaliacaoFisicaDao"%>
@@ -50,11 +53,11 @@
 						for(AvaliaFisica avaliaFisica:avaliacoes){
 						%>
 						<tr>
-							<td><%= avaliaFisica.getPeso()%></td>
+							<td><%= avaliaFisica.getPeso() %></td>
 							<td><%= avaliaFisica.getAltura()%></td>
 							<td><%= avaliaFisica.getIdade() %></td>
 							<td><%= avaliaFisica.getDataInicio()%></td>
-							<td><%= avaliaFisica.getImc()%></td>
+							<td><%= avaliaFisica.getImc() %></td>
 							<td><%= avaliaFisica.getMassaG() %></td>
 							<td><%= avaliaFisica.getMassaM()%></td>
 							<td><%= avaliaFisica.getPesoIdeal()%></td>

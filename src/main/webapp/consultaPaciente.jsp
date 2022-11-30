@@ -25,7 +25,6 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th>ID</th>
 							<th>Nome</th>
 							<th>Email</th>
 							<th>Sexo</th>
@@ -39,7 +38,6 @@
 						for(Paciente paciente:pacientes){
 						%>
 						<tr>
-							<td><%= paciente.getId()%></td>
 							<td><%= paciente.getNome()%></td>
 							<td><%= paciente.getEmail()%></td>
 							<td><%= paciente.getSexo()%></td>

@@ -15,13 +15,19 @@ public class AvaliaFisica {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	@Column(precision = 3, scale = 2)
 	private float peso;
+	@Column(precision = 4, scale = 2)
 	private float altura;
 	@Column(name = "data_inicio", columnDefinition = "DATE")
 	private LocalDate dataInicio;
+	@Column(precision = 3, scale = 2)
 	private float imc;
+	@Column(precision = 4, scale = 2)
 	private Double massaG;
+	@Column(precision = 4, scale = 2)
 	private Double massaM;
+	@Column(precision = 4, scale = 2)
 	private float pesoIdeal;
 	private int idade;
 	@ManyToOne

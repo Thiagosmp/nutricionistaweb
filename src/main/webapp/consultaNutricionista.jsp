@@ -25,7 +25,6 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th>ID</th>
 							<th>Nome</th>
 							<th>Email</th>
 							<th>Sexo</th>
@@ -38,7 +37,6 @@
 						for(Nutricionista nutricionista:nutricionistas){
 						%>
 						<tr>
-							<td><%= nutricionista.getId()%></td>
 							<td><%= nutricionista.getNome()%></td>
 							<td><%= nutricionista.getEmail()%></td>
 							<td><%= nutricionista.getSexo()%></td>
