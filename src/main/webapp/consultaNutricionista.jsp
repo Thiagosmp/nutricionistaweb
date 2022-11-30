@@ -43,8 +43,8 @@
 							<td><%= nutricionista.getStatus()%></td>
 							<td>
 							<button class="btn btn-secondary btn-sm"
-							value="method" name="method"
-							><a href="editnutricionista.jsp?id=<%= nutricionista.getId()%>">Editar</a></button>
+							value="method" name="method" 
+							><a href="editnutricionista.jsp?id=<%= nutricionista.getId()%>" style="text-decoration:none; color:#fff;">Editar</a></button>
 							<a class="btn btn-danger btn-sm" 
 							href="<%= request.getContextPath()%>/controllerNutricionista?id=<%=nutricionista.getId()%>">Excluir</a>
 							</td>
