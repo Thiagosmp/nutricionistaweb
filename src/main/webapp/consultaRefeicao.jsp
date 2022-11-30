@@ -25,13 +25,13 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th>ID</th>
 							<th>Café da manhã 1</th>
 							<th>Café da manhã 2</th>
 							<th>Almoço</th>
 							<th>Café da tarde 1</th>
 							<th>Café da tarde 2</th>
 							<th>Jantar</th>
+							<th>Paciente</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -40,13 +40,13 @@
 						for(Refeicao refeicao:refeicoes){
 						%>
 						<tr>
-							<td><%= refeicao.getId()%></td>
 							<td><%= refeicao.getCafe1()%></td>
 							<td><%= refeicao.getCafe2()%></td>
 							<td><%= refeicao.getAlmoco()%></td>
 							<td><%= refeicao.getCafeT1()%></td>
 							<td><%= refeicao.getCafeT2()%></td>
 							<td><%= refeicao.getJantar()%></td>
+							<td><%= refeicao.getPaciente().getNome() %></td>
 							<td>
 							<a class="btn btn-secondary btn-sm" 
 							href="editrefeicao.jsp?id=<%= refeicao.getId()%>">Editar</a>
